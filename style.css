@@ -1,4 +1,20 @@
-/* Temel Ayarlar (Reset) */
+:root {
+    /* Zemin Renkleri */
+    --zemin-ana: #000000;   
+    --zemin-kart: #111111;     
+    --zemin-header: #050505;   
+
+    /* Yazı Renkleri */
+    --yazi-baslik: #ffffff;     
+    --yazi-genel: #b0b0b0;     
+
+    /* Vurgu ve Parlama Renkleri */
+    --neon-mavi: #00ffff;      
+    --neon-golge: rgba(0, 255, 255, 0.5); 
+    --neon-mor: #bc13fe; 
+}
+
+/* --- TEMEL AYARLAR --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +22,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Genel Düzen */
 body {
+    background-color: var(--zemin-ana);
+    color: var(--yazi-genel);
     line-height: 1.6;
-    color: #333;
 }
 
 .container {
@@ -20,20 +36,22 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--yazi-baslik);
+    transition: 0.3s;
 }
 
 ul {
     list-style: none;
 }
 
-/* Header */
+/* --- HEADER --- */
 header {
-    background: #333;
-    color: #fff;
+    background: var(--zemin-header);
     padding: 1rem 0;
     position: sticky;
     top: 0;
+    z-index: 1000;
+    box-shadow: 0 0px 10px var(--neon-golge); 
 }
 
 header nav {
@@ -42,20 +60,29 @@ header nav {
     align-items: center;
 }
 
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--yazi-baslik);
+    text-shadow: 0 0 10px var(--neon-golge);
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
 }
 
 .nav-links a:hover {
-    color: #00bcd4;
+    color: var(--neon-mor);
+    text-shadow: 0 0 8px var(--neon-mor);
 }
 
-/* Hero Section */
+/* --- HERO SECTION --- */
 .hero {
     height: 80vh;
-    background: #f4f4f4;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -63,62 +90,225 @@ header nav {
 
 .hero h1 {
     font-size: 3rem;
+    color: var(--yazi-baslik);
     margin-bottom: 1rem;
 }
 
-.btn {
-    display: inline-block;
-    background: #00bcd4;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 1rem;
+/* Profil Fotoğrafı */
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Bölümler */
+.profile-img:hover {
+    transform: scale(1.5);
+    border: 2px solid var(--neon-mavi);
+    box-shadow: 0 0 30px var(--neon-mavi); 
+}
+
+/* --- BUTONLAR --- */
+.btn {
+    display: inline-block;
+    background: transparent;
+    color: var(--neon-mavi);
+    padding: 10px 25px;
+    border-radius: 5px;
+    margin-top: 1rem;
+    
+    border: 2px solid var(--neon-mavi);
+    box-shadow: 0 0 10px var(--neon-golge);
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background: var(--neon-mavi);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-mavi);
+}
+
+/* --- BÖLÜMLER GENEL --- */
 .section-padding {
     padding: 60px 0;
 }
 
-/* Proje Kartları */
+h2 {
+    color: var(--yazi-baslik);
+    border-left: 5px solid var(--neon-mavi);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* --- PROJE KARTLARI --- */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     margin-top: 20px;
 }
 
 .card {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: var(--zemin-kart);
+    padding: 25px;
+    border-radius: 10px;
+    
+    border: 3px solid #333; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    
+    transition: 0.3s ease;
 }
 
-/* Footer */
+/* Kartın üzerine gelince NEON ETKİSİ */
+.card:hover {
+    border-color: var(--neon-mavi); 
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px var(--neon-golge); 
+}
+
+.card h3 {
+    color: var(--yazi-baslik);
+    margin-bottom: 10px;
+}
+
+/* --- İLETİŞİM & FOOTER --- */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--yazi-genel);
+}
+
+.social-links a:hover {
+    color: var(--neon-mor);
+    text-shadow: 0 0 10px var(--neon-mor);
+}
+
 footer {
-    background: #333;
-    color: #fff;
+    background: var(--zemin-header);
+    color: var(--yazi-genel);
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+    border-top: 1px solid #222;
 }
 
-/* Profil Fotoğrafı Ayarları */
-.profile-img {
-    width: 180px;            /* Genişlik */
-    height: 180px;           /* Yükseklik */
-    border-radius: 50%;      /* Tam yuvarlak yapar */
-    object-fit: cover;       /* Fotoğrafı sıkıştırmadan kırpar */
-    border: 4px solid #fff;  /* Etrafına beyaz çerçeve */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Hafif gölge */
-    margin-bottom: 20px;     /* Yazı ile arasına boşluk */
-    transition: transform 0.3s ease; /* Hover efekti için geçiş */
+/* --- DURUM ROZETLERİ (STATUS BADGES) --- */
+
+/* 1. Kalp Atışı Animasyonu (Pulse) */
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 159, 67, 0.7); /* Turuncu gölge başlangıcı */
+    }
+    70% {
+        transform: scale(1.05); /* Hafifçe büyür */
+        box-shadow: 0 0 0 10px rgba(255, 159, 67, 0); /* Gölge genişleyerek kaybolur */
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 159, 67, 0);
+    }
 }
 
-/* Üzerine gelince hafif büyüme efekti */
-.profile-img:hover {
-    transform: scale(1.05);
-    border-color: #00bcd4; /* Çerçeve rengi değişsin */
+/* 2. Rozetlerin Genel Yapısı */
+.badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px; /* Hap şeklinde yuvarlaklık */
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px; /* Başlık ile arasına boşluk */
+}
+
+/* 3. "Devam Ediyor" Stili (Animasyonlu) */
+.badge-devam {
+    background: rgba(255, 159, 67, 0.1); /* İçi şeffaf turuncu */
+    color: #ff9f43; /* Neon Turuncu Yazı */
+    border: 1px solid #ff9f43;
+    animation: heartbeat 2s infinite; /* Sonsuz döngüde animasyon */
+}
+
+/* 4. "Bitti" Stili (Sabit) */
+.badge-bitti {
+    background: rgba(46, 213, 115, 0.1); /* İçi şeffaf yeşil */
+    color: #2ed573; /* Neon Yeşil Yazı */
+    border: 1px solid #2ed573;
+}
+
+
+/* --- AÇILIR KART (ACCORDION) STİLLERİ --- */
+
+/* Açma Butonu */
+.detay-btn {
+    background: transparent;
+    border: none;
+    color: var(--yazi-genel);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    border-bottom: 1px solid transparent; /* Alt çizgi efekti için */
+}
+
+.detay-btn:hover {
+    color: var(--neon-mavi);
+    border-bottom: 1px solid var(--neon-mavi);
+}
+
+.detay-btn i {
+    transition: transform 0.3s ease; /* Ok işaretinin dönmesi için */
+}
+
+/* Buton "aktif" olduğunda ok işareti dönsün */
+.detay-btn.aktif i {
+    transform: rotate(180deg);
+    color: var(--neon-mavi);
+}
+
+/* Gizli Alanın Dış Çerçevesi */
+.kart-detay {
+    max-height: 0; /* Başlangıçta yüksekliği 0 (yani kapalı) */
+    overflow: hidden; /* Taşanı gizle */
+    transition: max-height 0.4s ease-out; /* Kayarak açılma animasyonu */
+}
+
+/* Gizli Alanın İçeriği */
+.detay-icerik {
+    padding-top: 15px;
+    border-top: 1px solid #333;
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Proje Linkleri Alanı */
+.proje-linkleri {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.proje-linkleri a {
+    color: var(--neon-mavi);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.proje-linkleri a:hover {
+    text-shadow: 0 0 10px var(--neon-mavi);
 }

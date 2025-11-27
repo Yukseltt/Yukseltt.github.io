@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
 
     <header>
         <nav class="container">
-            <div class="logo">İsim Soyisim</div>
+            <div class="logo">Erhan Yüksel Turgut</div>
             <ul class="nav-links">
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#projeler">Projeler</a></li>
@@ -24,21 +26,137 @@
     <section class="hero">
         <div class="container">
             <img src="images/my_photo.jpeg" alt="Erhan Yüksel Turgut" class="profile-img">
-            
-            <h1>Merhaba, Ben Erhan.</h1>
-            <p>Makine Öğrenmesi, Python ve İHA Teknolojileri Üzerine Çalışıyorum.</p>
+
+            <h1>Merhaba, Ben Erhan Yüksel Turgut</h1>
+            <h3>Atatürk Üniversitesi Bilgisayar Mühendisliği 4. Sınıf Öğrencisiyim.</h3>
+            <p>Bu site benim ve projelerim hakkında bilgiler içerir. Aşağıdaki butona tıklayarak projelerimi
+                görebilirsiniz.</p>
             <a href="#projeler" class="btn">Projelerimi Gör</a>
         </div>
     </section>
 
     <section id="hakkimda" class="container section-padding">
         <h2>Hakkımda</h2>
-        <p>Buraya kendinizi tanıtan kısa bir yazı gelecek. Hangi dilleri bildiğinizden bahsedebilirsiniz.</p>
+        <p>Bir bilgisayar mühendisi adayı olarak, en büyük tutkum teorik bilgilerimi pratik uygulamalara dönüştürmektir.
+            Bu tutkunun ışığında birçok alanda projeler geliştirdim ve yarışmalarda yer aldım. Şuanda Makine Öğrenmesi
+            ve Görüntü İşleme alanlarında çalışıyorum. Bu alanlarda projeler geliştirerek deneyim elde ediyorum.</p>
+        <p>Ayrıca ilgilendiğim bir diğer alan mobil uygulama geliştirmektir. ATAUNI OBS mobil uygulaması klonu ve MEDİKO
+            - Yemek & Bakiye gibi geliştirdiğim uygulamalar bulunmaktadır. Mediko uygulaması ile öğrenci arkadaşlarıma
+            günlük yemek menüsü ve bakiye bilgisi sorgulama imkanı sunuyorum. Bu proje canlı olarak App Store ve Play
+            Store'da ücretsiz olarak erişilebilir.</p>
     </section>
 
     <section id="projeler" class="container section-padding">
         <h2>Projelerim</h2>
         <div class="project-grid">
+            <div class="card">
+                <span class="badge badge-devam">● Devam Ediyor</span>
+
+                <h3>📱 MEDİKO - Yemek & Bakiye</h3>
+                <p>.....</p>
+            </div>
+            <div class="card">
+                <span class="badge badge-bitti">Tamamlandı</span>
+
+                <h3>MEDİKO - Yemek & Bakiye</h3>
+                <p>Flutter ile geliştirdiğim bu mobil uygulama ile öğrenci arkadaşlarıma günlük yemek menüsü ve bakiye
+                    bilgisi sorgulama imkanı sunuyorum. Bakiye sorgulama okulumuzun sistemine entegre çalışmaktadır.
+                    Yemek menüleri ise internet sitesi üzerinden html parse ile elde edilmektedir</p>
+
+                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
+                    #Flutter #Mobile #İOS #Android
+                </div>
+
+                <button class="detay-btn" onclick="kartAc(this)">
+                    Detayları Gör <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="kart-detay">
+                    <div class="detay-icerik">
+                        <p><strong>Proje Detayı:</strong> Uygulama İOS ve Android platformlarında mevcuttur.</p>
+                        <p><strong>Kullanılanlar:</strong> Flutter, Dart.</p>
+
+                        <div class="proje-linkleri">
+                            <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
+                                target="_blank">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko&pcampaignid=web_share"
+                                target="_blank">
+                                <i class="fab fa-google-play"></i> Play Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <span class="badge badge-bitti">Tamamlandı</span>
+
+                <h3>MR Görüntülerinden Beyin Tümörü Tespiti</h3>
+                <p>Yapay Zekaya Giriş dersi için geliştirdiğim bu projede TensorFlow ve Python kullanarak,
+                    MR görüntüleri üzerinden beyin tümörlerini tespit eden çeşitli modeller eğittim ve değerlendirdim.
+                    Projede veri ön işleme, model eğitimi ve doğrulama adımlarını içeren kapsamlı bir çalışma
+                    gerçekleştirdim.
+                    Kendi geliştirdiğim CNN modelleri ile hibrit modellerin skorlarını yakaladım.
+                </p>
+
+                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
+                    #TensorFlow #DeepLearning #Python #CNN
+                </div>
+
+                <button class="detay-btn" onclick="kartAc(this)">
+                    Detayları Gör <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="kart-detay">
+                    <div class="detay-icerik">
+                        <p><strong>Proje Detayı:</strong> Bu projede yaklaşık 9500 MR görüntüsü kullanılarak %99+
+                            F1-Score
+                            değerleri elde edilmiştir.</p>
+                        <p><strong>Kullanılanlar:</strong> Python, TensorFlow, Matplotlib.</p>
+
+                        <div class="proje-linkleri">
+                            <a href="https://github.com/Yukseltt/mr_analyze" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge badge-bitti">Tamamlandı</span>
+
+                <h3>DeskFinder</h3>
+                <p>Kütüphanelerde boş masa aramanın sebep olduğu vakit kaybını ortadan kaldırmak için geliştirdiğim bu
+                    proje ile, masalardaki nesneler YOLO modelleri ile tespit edilerek etiketlenmektedir. Masa üzerinde bir </p>
+
+                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
+                    #Flutter #Mobile #İOS #Android
+                </div>
+
+                <button class="detay-btn" onclick="kartAc(this)">
+                    Detayları Gör <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="kart-detay">
+                    <div class="detay-icerik">
+                        <p><strong>Proje Detayı:</strong> Uygulama İOS ve Android platformlarında mevcuttur.</p>
+                        <p><strong>Kullanılanlar:</strong> Flutter, Dart.</p>
+
+                        <div class="proje-linkleri">
+                            <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
+                                target="_blank">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko&pcampaignid=web_share"
+                                target="_blank">
+                                <i class="fab fa-google-play"></i> Play Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="card">
                 <h3>Proje Adı 1</h3>
                 <p>Proje açıklaması buraya gelecek.</p>
@@ -52,16 +170,53 @@
 
     <section id="iletisim" class="container section-padding">
         <h2>İletişim</h2>
-        <p>Bana <a href="mailto:email@adresiniz.com">email@adresiniz.com</a> adresinden ulaşabilirsiniz.</p>
+        <p>
+            İletişim için
+            <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
+            adresini ve aşağıdaki sosyal linkleri kullanabilirsiniz.
+        </p>
+
         <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/" target="_blank"
+                rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/Yukseltt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Tüm Hakları Saklıdır.</p>
+        <p>&copy; Tüm Hakları Saklıdır.</p>
     </footer>
 
+    <script>
+        // Kart Açma/Kapama Fonksiyonu
+        function kartAc(buton) {
+            // 1. Tıklanan butondan sonra gelen gizli alanı bul
+            var detayAlani = buton.nextElementSibling;
+
+            // 2. Butona 'aktif' sınıfını ekle/çıkar (Ok işaretini döndürmek için)
+            buton.classList.toggle("aktif");
+
+            // 3. Yükseklik ayarı ile açma/kapama yap
+            if (detayAlani.style.maxHeight) {
+                // Zaten açıksa kapat (Yüksekliği sıfırla)
+                detayAlani.style.maxHeight = null;
+                buton.innerHTML = 'Detayları Gör <i class="fas fa-chevron-down"></i>'; // Yazıyı eski haline getir
+            } else {
+                // Kapalıysa aç (İçeriğin gerçek yüksekliği kadar yer aç)
+                detayAlani.style.maxHeight = detayAlani.scrollHeight + "px";
+                buton.innerHTML = 'Kapat <i class="fas fa-chevron-up"></i>'; // Yazıyı değiştir
+
+                // Ok işaretini CSS ile döndürdüğümüz için tekrar i class'ını düzeltmemize gerek yok ama
+                // Yazıyı değiştirdiğimiz için ikon siliniyor, yukarıdaki satırda ikonu tekrar ekledim.
+            }
+        }
+    </script>
 </body>
+
 </html>
