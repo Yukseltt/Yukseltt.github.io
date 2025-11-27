@@ -104,3 +104,21 @@ footer {
     padding: 20px 0;
     margin-top: 40px;
 }
+
+/* Profil Fotoğrafı Ayarları */
+.profile-img {
+    width: 180px;            /* Genişlik */
+    height: 180px;           /* Yükseklik */
+    border-radius: 50%;      /* Tam yuvarlak yapar */
+    object-fit: cover;       /* Fotoğrafı sıkıştırmadan kırpar */
+    border: 4px solid #fff;  /* Etrafına beyaz çerçeve */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Hafif gölge */
+    margin-bottom: 20px;     /* Yazı ile arasına boşluk */
+    transition: transform 0.3s ease; /* Hover efekti için geçiş */
+}
+
+/* Üzerine gelince hafif büyüme efekti */
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: #00bcd4; /* Çerçeve rengi değişsin */
+}
