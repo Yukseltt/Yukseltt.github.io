@@ -312,3 +312,145 @@ footer {
 .proje-linkleri a:hover {
     text-shadow: 0 0 10px var(--neon-mavi);
 }
+
+
+/* --- DETAY GÖRSELLERİ STİLİ --- */
+
+/* Görselin içinde duracağı kutu */
+.detay-gorsel-container {
+    margin-bottom: 20px; /* Yazı ile arasında boşluk bırak */
+    text-align: center;  /* Görseli ortala */
+}
+
+/* Görselin kendisi */
+.detay-img {
+    width: 100%;         /* Kartın genişliğine tam otursun (Mobil uyum için şart) */
+    height: auto;        /* En-boy oranı bozulmasın */
+    border-radius: 8px;  /* Köşeleri hafif yuvarlat */
+    
+    /* Karanlık tema için ince bir çerçeve */
+    border: 1px solid #333; 
+    
+    /* Hafif bir parlama (Glow) efekti (İstersen kaldırabilirsin) */
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1); 
+    
+    transition: transform 0.3s ease; /* Hover için hazırlık */
+}
+
+/* İsteğe bağlı: Üzerine gelince hafif büyüsün */
+.detay-img:hover {
+    transform: scale(1.02);
+    border-color: var(--neon-mavi);
+}
+
+
+/* --- GALERİ THUMBNAIL YAPISI --- */
+.galeri-grid {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Çok resim varsa yana kaydırma cubugu cıksın */
+    padding-bottom: 5px;
+}
+
+.galeri-thumb {
+    width: 100px; /* Küçük resim boyutu */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.galeri-thumb:hover {
+    opacity: 0.7;
+    border-color: var(--neon-mavi);
+}
+
+/* --- LIGHTBOX (MODAL) STİLLERİ --- */
+.lightbox {
+    display: none; /* Varsayılan olarak gizli */
+    position: fixed;
+    z-index: 9999; /* En üstte durması için */
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Arka plan karartma */
+}
+
+/* Büyük Resim */
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 900px; /* Çok devasa olmasın */
+    max-height: 80vh; /* Ekrandan taşmasın */
+    object-fit: contain;
+    border: 2px solid var(--neon-mavi);
+    box-shadow: 0 0 20px var(--neon-golge);
+    animation: zoom 0.4s; /* Açılış efekti */
+}
+
+/* Açılış Animasyonu */
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* Kapatma Butonu (X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--neon-mavi);
+}
+
+/* İleri/Geri Okları */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--neon-mavi);
+}
+
+/* Resim Alt Yazısı (Sayaç) */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}

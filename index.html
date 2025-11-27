@@ -73,6 +73,13 @@
 
                 <div class="kart-detay">
                     <div class="detay-icerik">
+                        <div class="galeri-grid">
+                            <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Menü Sayfası">
+
+                            <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Bakiye Sorgulama Sayfası">
+                        </div>
                         <p><strong>Proje Detayı:</strong> Uygulama İOS ve Android platformlarında mevcuttur.</p>
                         <p><strong>Kullanılanlar:</strong> Flutter, Dart.</p>
 
@@ -129,10 +136,12 @@
 
                 <h3>DeskFinder</h3>
                 <p>Kütüphanelerde boş masa aramanın sebep olduğu vakit kaybını ortadan kaldırmak için geliştirdiğim bu
-                    proje ile, masalardaki nesneler YOLO modelleri ile tespit edilerek etiketlenmektedir. Masa üzerinde bir </p>
+                    proje ile, masalardaki nesneler YOLO ile tespit edilerek etiketlenmektedir. Masa üzerinde
+                    belirli nesnelerin varlığı kontrol edilmektedir. Eğer bu nesneler masa alanı içerisinde ise masa
+                    dolu olarak işaretlenmektedir.</p>
 
                 <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
-                    #Flutter #Mobile #İOS #Android
+                    #YOLO #Python #ImageProcessing #Ultralytics
                 </div>
 
                 <button class="detay-btn" onclick="kartAc(this)">
@@ -141,17 +150,16 @@
 
                 <div class="kart-detay">
                     <div class="detay-icerik">
-                        <p><strong>Proje Detayı:</strong> Uygulama İOS ve Android platformlarında mevcuttur.</p>
-                        <p><strong>Kullanılanlar:</strong> Flutter, Dart.</p>
-
+                        <p><strong>Proje Detayı:</strong> Kütüphane girişine koyulacak bir panel aracılığıyla masaların
+                            durumları gösterilebilir.</p>
+                        <p><strong>Kullanılanlar:</strong> Python, YOLO.</p>
                         <div class="proje-linkleri">
-                            <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
-                                target="_blank">
-                                <i class="fab fa-apple"></i> App Store
+                            <a href="https://github.com/Yukseltt/DeskFinder" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko&pcampaignid=web_share"
-                                target="_blank">
-                                <i class="fab fa-google-play"></i> Play Store
+                            <a href="https://www.linkedin.com/posts/erhan-y%C3%BCksel-turgut-b098172b8_herkese-selamlar-%C3%BCzerinde-%C3%A7al%C4%B1%C5%9Ft%C4%B1%C4%9F%C4%B1m-mini-activity-7389715074522816513-LZhm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExLpnkBAmxs8O2uu8ITy9BfV18tMm9SsqY"
+                                target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i> LinkedIn
                             </a>
                         </div>
                     </div>
@@ -173,7 +181,9 @@
         <p>
             İletişim için
             <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
-            adresini ve aşağıdaki sosyal linkleri kullanabilirsiniz.
+            ve
+            <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
+            mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
         </p>
 
         <div class="social-links">
@@ -192,6 +202,17 @@
     <footer>
         <p>&copy; Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <div id="lightbox-modal" class="lightbox">
+        <span class="close-btn" onclick="kapatLightbox()">&times;</span>
+
+        <img class="lightbox-content" id="lightbox-img">
+
+        <a class="prev" onclick="degistirSlayt(-1)">&#10094;</a>
+        <a class="next" onclick="degistirSlayt(1)">&#10095;</a>
+
+        <div id="caption"></div>
+    </div>
 
     <script>
         // Kart Açma/Kapama Fonksiyonu
@@ -216,6 +237,79 @@
                 // Yazıyı değiştirdiğimiz için ikon siliniyor, yukarıdaki satırda ikonu tekrar ekledim.
             }
         }
+
+
+        // --- LIGHTBOX GALERİ SİSTEMİ ---
+
+        let mevcutSlaytIndex = 0;
+        let mevcutGaleriResimleri = []; // O an açık olan projenin resim listesi
+
+        // Resmi Açma Fonksiyonu
+        function acLightbox(tiklananImg) {
+            // 1. Tıklanan resmin olduğu kutudaki (galeri-grid) TÜM resimleri bul
+            const galeriKutusu = tiklananImg.parentElement;
+            const resimler = galeriKutusu.querySelectorAll('img');
+
+            // 2. Bu resimlerin kaynaklarını (src) listeye at
+            mevcutGaleriResimleri = Array.from(resimler).map(img => ({
+                src: img.src,
+                alt: img.alt
+            }));
+
+            // 3. Tıklanan resmin o listede kaçıncı sırada olduğunu bul
+            mevcutSlaytIndex = mevcutGaleriResimleri.findIndex(item => item.src === tiklananImg.src);
+
+            // 4. Modalı göster
+            guncelleLightbox();
+            document.getElementById('lightbox-modal').style.display = "block";
+        }
+
+        // Modalı Kapatma
+        function kapatLightbox() {
+            document.getElementById('lightbox-modal').style.display = "none";
+        }
+
+        // İleri - Geri Tuşları İçin
+        function degistirSlayt(n) {
+            mevcutSlaytIndex += n;
+
+            // Eğer son resimden sonra ileri basarsa başa dön
+            if (mevcutSlaytIndex >= mevcutGaleriResimleri.length) {
+                mevcutSlaytIndex = 0;
+            }
+            // Eğer ilk resimden önce geri basarsa sona dön
+            if (mevcutSlaytIndex < 0) {
+                mevcutSlaytIndex = mevcutGaleriResimleri.length - 1;
+            }
+
+            guncelleLightbox();
+        }
+
+        // Görüntüyü Güncelleme Yardımcı Fonksiyonu
+        function guncelleLightbox() {
+            const modalImg = document.getElementById("lightbox-img");
+            const captionText = document.getElementById("caption");
+
+            // Şu anki index'teki resmi ve yazıyı getir
+            const aktifResim = mevcutGaleriResimleri[mevcutSlaytIndex];
+
+            modalImg.src = aktifResim.src;
+            // Resim altındaki yazı: "Giriş Ekranı (1 / 3)" gibi
+            captionText.innerHTML = `${aktifResim.alt} <br> <span style="font-size:0.8rem; color:#666">(${mevcutSlaytIndex + 1} / ${mevcutGaleriResimleri.length})</span>`;
+        }
+
+        // Klavye Kontrolü (Sol/Sağ ok ve ESC tuşu)
+        document.addEventListener('keydown', function (event) {
+            if (document.getElementById('lightbox-modal').style.display === "block") {
+                if (event.key === "ArrowLeft") {
+                    degistirSlayt(-1);
+                } else if (event.key === "ArrowRight") {
+                    degistirSlayt(1);
+                } else if (event.key === "Escape") {
+                    kapatLightbox();
+                }
+            }
+        });
     </script>
 </body>
 
