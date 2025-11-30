@@ -19,6 +19,7 @@
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#projeler">Projeler</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
+                <a href="CV_ErhanYukselTurgut.pdf" download>CV</a>
             </ul>
         </nav>
     </header>
@@ -29,9 +30,7 @@
 
             <h1>Merhaba, Ben Erhan Yüksel Turgut</h1>
             <h3>Atatürk Üniversitesi Bilgisayar Mühendisliği 4. Sınıf Öğrencisiyim.</h3>
-            <p>Bu site benim ve projelerim hakkında bilgiler içerir. Aşağıdaki butona tıklayarak projelerimi
-                görebilirsiniz.</p>
-            <a href="#projeler" class="btn">Projelerimi Gör</a>
+            <p>Bu site benim ve projelerim hakkında bilgiler içermektedir.</p>
         </div>
     </section>
 
@@ -133,6 +132,52 @@
 
             <div class="card">
                 <span class="badge badge-bitti">Tamamlandı</span>
+                <h3>MR Görüntülerinden Beyin Tümörü Tespiti</h3>
+
+                <p class="card-ozet">
+                    Yapay Zekaya Giriş dersi için geliştirdiğim bu projede TensorFlow ve Python kullanarak,
+                    MR görüntüleri üzerinden beyin tümörlerini tespit eden çeşitli modeller eğittim ve değerlendirdim.
+                    Projede veri ön işleme, model eğitimi ve doğrulama adımlarını içeren kapsamlı bir çalışma
+                    gerçekleştirdim.
+                    Kendi geliştirdiğim CNN modelleri ile hibrit modellerin skorlarını yakaladım.
+                </p>
+
+                <div class="tech-stack"
+                    style="margin-top: 10px; margin-bottom: 15px; color: var(--neon-mavi); font-size: 0.9rem;">
+                    #TensorFlow #DeepLearning #Python #CNN
+                </div>
+
+                <button class="incele-btn" onclick="projeDetayAc(this)">GÖRÜNTÜLE</button>
+
+
+                <div class="gizli-veri">
+
+                    <div class="full-aciklama">
+                        <p><strong>Proje Detayı:</strong> Bu projede yaklaşık 9500 MR görüntüsü kullanılarak %99+
+                            F1-Score
+                            değerleri elde edilmiştir.</p>
+                        <p>Bu proje şu an 5000+ aktif kullanıcıya sahiptir. Veriler API üzerinden çekilip önbelleğe
+                            alınmaktadır.</p>
+                    </div>
+
+                    <div class="gorsel-kaynak">
+                        <div class="galeri-grid">
+                            <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Ana Ekran">
+                            <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb" alt="Menü">
+                        </div>
+                    </div>
+
+                    <div class="link-kaynak">
+                        <a href="https://github.com/..." target="_blank" style="color:var(--neon-mavi);">
+                            <i class="fab fa-github"></i> GitHub Kaynak Kodları
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge badge-bitti">Tamamlandı</span>
 
                 <h3>DeskFinder</h3>
                 <p>Kütüphanelerde boş masa aramanın sebep olduğu vakit kaybını ortadan kaldırmak için geliştirdiğim bu
@@ -176,31 +221,31 @@
         </div>
     </section>
 
-    <section id="iletisim" class="container section-padding">
-        <h2>İletişim</h2>
-        <p>
-            İletişim için
-            <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
-            ve
-            <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
-            mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
-        </p>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/" target="_blank"
-                rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
-            <a href="https://github.com/Yukseltt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-
-        </div>
-    </section>
 
     <footer>
-        <p>&copy; Tüm Hakları Saklıdır.</p>
+        <section id="iletisim" class="container section-padding">
+            <h2>İletişim</h2>
+            <p>
+                İletişim için
+                <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
+                ve
+                <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
+                mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
+            </p>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/" target="_blank"
+                    rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="https://github.com/Yukseltt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+            </div>
+        </section>
     </footer>
 
     <div id="lightbox-modal" class="lightbox">
@@ -212,6 +257,21 @@
         <a class="next" onclick="degistirSlayt(1)">&#10095;</a>
 
         <div id="caption"></div>
+    </div>
+
+    <div id="proje-modal" class="modal-overlay" onclick="modalKapat(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="modalKapatButon()">&times;</span>
+
+            <div id="modal-body">
+                <h2 id="modal-baslik">Proje Başlığı</h2>
+                <div id="modal-gorseller" class="galeri-grid">
+                </div>
+                <p id="modal-aciklama" class="modal-text">Açıklama...</p>
+                <div id="modal-linkler" class="proje-linkleri">
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -310,6 +370,46 @@
                 }
             }
         });
+
+
+        // Modalı Açan Fonksiyon
+        function projeDetayAc(buton) {
+            // 1. Tıklanan butonun olduğu kartı bul
+            const kart = buton.closest('.card');
+
+            // 2. Kartın içindeki verileri al
+            const baslik = kart.querySelector('h3').innerText;
+
+            // Gizli veri kutusunu bul
+            const gizliVeri = kart.querySelector('.gizli-veri');
+            const detayMetni = gizliVeri.querySelector('.full-aciklama').innerHTML;
+            const gorseller = gizliVeri.querySelector('.gorsel-kaynak').innerHTML;
+            const linkler = gizliVeri.querySelector('.link-kaynak').innerHTML;
+
+            // 3. Modalı doldur
+            document.getElementById('modal-baslik').innerText = baslik;
+            document.getElementById('modal-aciklama').innerHTML = detayMetni;
+            document.getElementById('modal-gorseller').innerHTML = gorseller;
+            document.getElementById('modal-linkler').innerHTML = linkler;
+
+            // 4. Modalı göster (Flex yaparak ortalıyoruz)
+            document.getElementById('proje-modal').style.display = 'flex';
+            // Body kaydırmasını kilitle (Arka plan kaymasın)
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Modalı Kapatan Fonksiyonlar
+        function modalKapatButon() {
+            document.getElementById('proje-modal').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Kaydırmayı geri aç
+        }
+
+        // Siyah boşluğa tıklayınca kapatma
+        function modalKapat(event) {
+            if (event.target.id === 'proje-modal') {
+                modalKapatButon();
+            }
+        }
     </script>
 </body>
 
