@@ -48,30 +48,49 @@
     <section id="projeler" class="container section-padding">
         <h2>Projelerim</h2>
         <div class="project-grid">
+            <!--Mediko - Yemek & Bakiye-->
             <div class="card">
-                <span class="badge badge-devam">● Devam Ediyor</span>
 
-                <h3>📱 MEDİKO - Yemek & Bakiye</h3>
-                <p>.....</p>
-            </div>
-            <div class="card">
                 <span class="badge badge-bitti">Tamamlandı</span>
 
-                <h3>MEDİKO - Yemek & Bakiye</h3>
-                <p>Flutter ile geliştirdiğim bu mobil uygulama ile öğrenci arkadaşlarıma günlük yemek menüsü ve bakiye
-                    bilgisi sorgulama imkanı sunuyorum. Bakiye sorgulama okulumuzun sistemine entegre çalışmaktadır.
-                    Yemek menüleri ise internet sitesi üzerinden html parse ile elde edilmektedir</p>
+                <h3>Mediko - Yemek & Bakiye Mobil Uygulaması</h3>
 
-                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
-                    #Flutter #Mobile #İOS #Android
-                </div>
+                <p class="card-ozet">
+                    Flutter ile geliştirdiğim bu mobil uygulamayı, öğrenci arkadaşlarımın günlük yemek menüsünü
+                    görüntüleyebilmesi ve bakiye sorgulaması yapabilmesi için tasarladım. Bakiye sorgulama
+                    özelliği okulumuzun mevcut sistemine entegre çalışmakta olup, kullanıcıların güncel hesap
+                    bilgilerini gerçek zamanlı olarak alır. Ayrıca bakiye yetersiz olduğunda kullanıcıyı
+                    otomatik olarak uyarır ve bakiye yükleme sayfasına yönlendirir.
+                </p>
 
-                <button class="detay-btn" onclick="kartAc(this)">
-                    Detayları Gör <i class="fas fa-chevron-down"></i>
-                </button>
+                <button class="incele-btn" onclick="projeDetayAc(this)">GÖRÜNTÜLE</button>
 
-                <div class="kart-detay">
-                    <div class="detay-icerik">
+                <div class="gizli-veri">
+
+                    <div class="full-aciklama">
+                        <p>Flutter ile geliştirdiğim bu mobil uygulamayı, öğrenci arkadaşlarımın günlük yemek menüsünü
+                            görüntüleyebilmesi ve bakiye sorgulaması yapabilmesi için tasarladım. Bakiye sorgulama
+                            özelliği okulumuzun mevcut sistemine entegre çalışmakta olup, kullanıcıların güncel hesap
+                            bilgilerini gerçek zamanlı olarak alır. Ayrıca bakiye yetersiz olduğunda kullanıcıyı
+                            otomatik olarak uyarır ve bakiye yükleme sayfasına yönlendirir.
+                            <br />
+                            Yemek menüleri ise okulun web sitesinden HTML parse yöntemi ile anlık olarak çekilmektedir.
+                            Böylece uygulama, manuel müdahale gerektirmeden sürekli olarak güncel kalmaktadır.
+                            <br />
+                            Uygulama İOS ve Android platformlarında mevcuttur. 200+
+                            kullanıcı tarafından aktif olarak kullanılmaktadır.
+                        </p>
+
+                        <p><br /><strong>Kullanılan Teknolojiler:</strong> Flutter, Dart.</p>
+
+                        <div class="tech-stack"
+                            style="margin-top: 10px; margin-bottom: 15px; color: var(--neon-mavi); font-size: 0.9rem;">
+                            #Flutter #Mobil #İOS #Android
+                        </div>
+
+                    </div>
+
+                    <div class="gorsel-kaynak">
                         <div class="galeri-grid">
                             <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
                                 alt="Menü Sayfası">
@@ -79,145 +98,156 @@
                             <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
                                 alt="Bakiye Sorgulama Sayfası">
                         </div>
-                        <p><strong>Proje Detayı:</strong> Uygulama İOS ve Android platformlarında mevcuttur.</p>
-                        <p><strong>Kullanılanlar:</strong> Flutter, Dart.</p>
-
-                        <div class="proje-linkleri">
-                            <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
-                                target="_blank">
-                                <i class="fab fa-apple"></i> App Store
-                            </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko&pcampaignid=web_share"
-                                target="_blank">
-                                <i class="fab fa-google-play"></i> Play Store
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <span class="badge badge-bitti">Tamamlandı</span>
-
-                <h3>MR Görüntülerinden Beyin Tümörü Tespiti</h3>
-                <p>Yapay Zekaya Giriş dersi için geliştirdiğim bu projede TensorFlow ve Python kullanarak,
-                    MR görüntüleri üzerinden beyin tümörlerini tespit eden çeşitli modeller eğittim ve değerlendirdim.
-                    Projede veri ön işleme, model eğitimi ve doğrulama adımlarını içeren kapsamlı bir çalışma
-                    gerçekleştirdim.
-                    Kendi geliştirdiğim CNN modelleri ile hibrit modellerin skorlarını yakaladım.
-                </p>
-
-                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
-                    #TensorFlow #DeepLearning #Python #CNN
-                </div>
-
-                <button class="detay-btn" onclick="kartAc(this)">
-                    Detayları Gör <i class="fas fa-chevron-down"></i>
-                </button>
-
-                <div class="kart-detay">
-                    <div class="detay-icerik">
-                        <p><strong>Proje Detayı:</strong> Bu projede yaklaşık 9500 MR görüntüsü kullanılarak %99+
-                            F1-Score
-                            değerleri elde edilmiştir.</p>
-                        <p><strong>Kullanılanlar:</strong> Python, TensorFlow, Matplotlib.</p>
-
-                        <div class="proje-linkleri">
-                            <a href="https://github.com/Yukseltt/mr_analyze" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <span class="badge badge-bitti">Tamamlandı</span>
-                <h3>MR Görüntülerinden Beyin Tümörü Tespiti</h3>
-
-                <p class="card-ozet">
-                    Yapay Zekaya Giriş dersi için geliştirdiğim bu projede TensorFlow ve Python kullanarak,
-                    MR görüntüleri üzerinden beyin tümörlerini tespit eden çeşitli modeller eğittim ve değerlendirdim.
-                    Projede veri ön işleme, model eğitimi ve doğrulama adımlarını içeren kapsamlı bir çalışma
-                    gerçekleştirdim.
-                    Kendi geliştirdiğim CNN modelleri ile hibrit modellerin skorlarını yakaladım.
-                </p>
-
-                <div class="tech-stack"
-                    style="margin-top: 10px; margin-bottom: 15px; color: var(--neon-mavi); font-size: 0.9rem;">
-                    #TensorFlow #DeepLearning #Python #CNN
-                </div>
-
-                <button class="incele-btn" onclick="projeDetayAc(this)">GÖRÜNTÜLE</button>
-
-
-                <div class="gizli-veri">
-
-                    <div class="full-aciklama">
-                        <p><strong>Proje Detayı:</strong> Bu projede yaklaşık 9500 MR görüntüsü kullanılarak %99+
-                            F1-Score
-                            değerleri elde edilmiştir.</p>
-                        <p>Bu proje şu an 5000+ aktif kullanıcıya sahiptir. Veriler API üzerinden çekilip önbelleğe
-                            alınmaktadır.</p>
-                    </div>
-
-                    <div class="gorsel-kaynak">
-                        <div class="galeri-grid">
-                            <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
-                                alt="Ana Ekran">
-                            <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb" alt="Menü">
-                        </div>
                     </div>
 
                     <div class="link-kaynak">
-                        <a href="https://github.com/..." target="_blank" style="color:var(--neon-mavi);">
-                            <i class="fab fa-github"></i> GitHub Kaynak Kodları
+                        <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr" target="_blank">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko&pcampaignid=web_share"
+                            target="_blank">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
                     </div>
                 </div>
             </div>
 
+
+            <!--MR Görüntülerinden Beyin Tümörü Analizi-->
             <div class="card">
                 <span class="badge badge-bitti">Tamamlandı</span>
+                <h3>MR Görüntülerinden Beyin Tümörü Analizi</h3>
 
-                <h3>DeskFinder</h3>
-                <p>Kütüphanelerde boş masa aramanın sebep olduğu vakit kaybını ortadan kaldırmak için geliştirdiğim bu
-                    proje ile, masalardaki nesneler YOLO ile tespit edilerek etiketlenmektedir. Masa üzerinde
-                    belirli nesnelerin varlığı kontrol edilmektedir. Eğer bu nesneler masa alanı içerisinde ise masa
-                    dolu olarak işaretlenmektedir.</p>
+                <p class="card-ozet">
+                    Bu projede, Transfer Learning tabanlı hibrit mimariler ve sıfırdan tasarladığım özgün CNN
+                    modellerinin
+                    performansını karşılaştıran kapsamlı bir derin öğrenme çalışması gerçekleştirdim. Modelleri
+                    eğitmeden önce parametre optimizasyonu, Augmentation ve EDA gibi çalışmalar ile verileri
+                    eğitime hazır hale getirdim. TensorFlow ve Albumentations kullanarak geliştirdiğim projede,
+                    MobileNetV2 ve ResNet50 tabanlı hibrit modelin Fine-Tuning edilmesiyle %99,61 F1-Score elde
+                    ettim. Sıfırdan geliştirdiğim EYTV10 modelimde Aşamalı Boyutlandırma, TTA ve Label Smoothing
+                    tekniklerini uygulayarak %99,01 F1-Score elde ederek başarıya ulaştım. Bu proje ile modern
+                    eğitim stratejileri kullanıldığında, özgün modellerin büyük ön eğitimli modellerle rekabet
+                    edebileceği
+                    sonucunu elde ettim.
+                </p>
 
-                <div class="tech-stack" style="margin-top: 10px; color: var(--neon-mavi); font-size: 0.9rem;">
-                    #YOLO #Python #ImageProcessing #Ultralytics
-                </div>
+                <button class="incele-btn" onclick="projeDetayAc(this)">GÖRÜNTÜLE</button>
 
-                <button class="detay-btn" onclick="kartAc(this)">
-                    Detayları Gör <i class="fas fa-chevron-down"></i>
-                </button>
+                <div class="gizli-veri">
 
-                <div class="kart-detay">
-                    <div class="detay-icerik">
-                        <p><strong>Proje Detayı:</strong> Kütüphane girişine koyulacak bir panel aracılığıyla masaların
-                            durumları gösterilebilir.</p>
-                        <p><strong>Kullanılanlar:</strong> Python, YOLO.</p>
-                        <div class="proje-linkleri">
-                            <a href="https://github.com/Yukseltt/DeskFinder" target="_blank">
-                                <i class="fab fa-github"></i> GitHub
-                            </a>
-                            <a href="https://www.linkedin.com/posts/erhan-y%C3%BCksel-turgut-b098172b8_herkese-selamlar-%C3%BCzerinde-%C3%A7al%C4%B1%C5%9Ft%C4%B1%C4%9F%C4%B1m-mini-activity-7389715074522816513-LZhm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAExLpnkBAmxs8O2uu8ITy9BfV18tMm9SsqY"
-                                target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i> LinkedIn
-                            </a>
+                    <div class="full-aciklama">
+                        <p>Bu projede, Transfer Learning tabanlı hibrit mimariler ve sıfırdan tasarladığım özgün CNN
+                            modellerinin
+                            performansını karşılaştıran kapsamlı bir derin öğrenme çalışması gerçekleştirdim. Modelleri
+                            eğitmeden önce parametre optimizasyonu, Augmentation ve EDA gibi çalışmalar ile verileri
+                            eğitime hazır hale getirdim.
+                            <br />
+                            TensorFlow ve Albumentations kullanarak geliştirdiğim projede,
+                            MobileNetV2 ve ResNet50 tabanlı hibrit modelin Fine-Tuning edilmesiyle %99,61 F1-Score elde
+                            ettim. Sıfırdan geliştirdiğim EYTV10 modelimde Aşamalı Boyutlandırma, TTA ve Label Smoothing
+                            tekniklerini uygulayarak %99,01 F1-Score elde ederek başarıya ulaştım. Bu proje ile modern
+                            eğitim stratejileri kullanıldığında, özgün modellerin büyük ön eğitimli modellerle rekabet
+                            edebileceği
+                            sonucunu elde ettim.
+                            <br />
+                            Proje yaklaşık 9500 adet MR görüntüsü kullanılarak
+                            gerçekleştirilmiştir. Bu görütnüler 'tumor' ve 'no tumor' olarak 2 sınıfa dengeli olarak
+                            dağılmıştır.
+                        </p>
+
+                        <p><br /><strong>Kullanılan Teknolojiler:</strong> Python, TensorFlow, Matplotlib.</p>
+
+                        <div class="tech-stack"
+                            style="margin-top: 10px; margin-bottom: 15px; color: var(--neon-mavi); font-size: 0.9rem;">
+                            #Python #TensorFlow #DeepLearning #CNN
                         </div>
+                    </div>
+
+                    <div class="link-kaynak">
+                        <a href="https://github.com/Yukseltt/mr_analyze" target="_blank"
+                            style="color:var(--neon-mavi);">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
+
+
+            <!--DeskFinder - Görüntü İşleme Projesi-->
             <div class="card">
-                <h3>Proje Adı 1</h3>
-                <p>Proje açıklaması buraya gelecek.</p>
+
+                <span class="badge badge-bitti">Tamamlandı</span>
+
+                <h3>DeskFinder - Görüntü İşleme Projesi</h3>
+
+                <p class="card-ozet">
+                    Kütüphanelerde boş masa ararken yaşanan zaman kaybını ortadan kaldırmak için geliştirdiğim bu
+                    projede, masalar üzerindeki nesneler YOLO modeli ile gerçek zamanlı olarak tespit
+                    edilmekte ve etiketlenmektedir. Kitap, laptop, çanta veya insan gibi belirli nesneler masa
+                    alanı
+                    içinde algılanırsa masa 'dolu' olarak, aksi durumda 'boş' olarak işaretlenmektedir.
+                    <br />
+                    Masa alanları config.json dosyası üzerinden kalıcı şekilde saklanmaktadır ve düzenleme modu
+                    sayesinde
+                    kolayca yeniden çizilebilmektedir. Nesnelerin doğruluk eşiklerinin ayarlanması ile algılama
+                    hassasiyeti kontrol edilmekte ve yalnızca masa bölgeleri içerisindeki nesneler işaretlenerek
+                    sade bir
+                    arayüz sunulmaktadır. Böylece kullanıcılar alana girmeden önce boş masaları hızlıca görebilmektedir.
+                </p>
+
+                <button class="incele-btn" onclick="projeDetayAc(this)">GÖRÜNTÜLE</button>
+
+                <div class="gizli-veri">
+
+                    <div class="full-aciklama">
+                        <p>Kütüphanelerde boş masa ararken yaşanan zaman kaybını ortadan kaldırmak için geliştirdiğim bu
+                            projede, masalar üzerindeki nesneler YOLO modeli ile gerçek zamanlı olarak tespit
+                            edilmekte ve etiketlenmektedir. Kitap, laptop, çanta veya insan gibi belirli nesneler masa
+                            alanı
+                            içinde algılanırsa masa 'dolu' olarak, aksi durumda 'boş' olarak işaretlenmektedir.
+                            <br />
+                            Masa alanları config.json dosyası üzerinden kalıcı şekilde saklanmaktadır ve düzenleme modu
+                            sayesinde
+                            kolayca yeniden çizilebilmektedir. Nesnelerin doğruluk eşiklerinin ayarlanması ile algılama
+                            hassasiyeti kontrol edilmekte ve yalnızca masa bölgeleri içerisindeki nesneler işaretlenerek
+                            sade bir
+                            arayüz sunulmaktadır. Böylece kullanıcılar alana girmeden önce boş masaları hızlıca
+                            görebilmektedir.
+                        </p>
+
+                        <p><br /><strong>Kullanılan Teknolojiler:</strong> Python, OpenCV, YOLO.</p>
+
+                        <div class="tech-stack"
+                            style="margin-top: 10px; margin-bottom: 15px; color: var(--neon-mavi); font-size: 0.9rem;">
+                            #Python #OpenCV #YOLO #Numpy #JSON
+                        </div>
+
+                    </div>
+
+                    <div class="gorsel-kaynak">
+                        <div class="galeri-grid">
+                            <img src="images/deskfinder_1.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Menü Sayfası">
+
+                            <img src="images/deskfinder_2.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Bakiye Sorgulama Sayfası">
+
+                            <img src="images/deskfinder_3.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                alt="Bakiye Sorgulama Sayfası">
+                        </div>
+                    </div>
+
+                    <div class="link-kaynak">
+                        <a href="https://github.com/Yukseltt/DeskFinder" target="_blank"
+                            style="color:var(--neon-mavi);">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>Proje Adı 2</h3>
-                <p>Proje açıklaması buraya gelecek.</p>
-            </div>
+
+
         </div>
     </section>
 
@@ -265,9 +295,10 @@
 
             <div id="modal-body">
                 <h2 id="modal-baslik">Proje Başlığı</h2>
+
+                <p id="modal-aciklama" class="modal-text">Açıklama...</p>
                 <div id="modal-gorseller" class="galeri-grid">
                 </div>
-                <p id="modal-aciklama" class="modal-text">Açıklama...</p>
                 <div id="modal-linkler" class="proje-linkleri">
                 </div>
             </div>
@@ -372,29 +403,52 @@
         });
 
 
-        // Modalı Açan Fonksiyon
+        // Modalı Açan Fonksiyon (Hata Korumalı)
         function projeDetayAc(buton) {
             // 1. Tıklanan butonun olduğu kartı bul
             const kart = buton.closest('.card');
-
-            // 2. Kartın içindeki verileri al
-            const baslik = kart.querySelector('h3').innerText;
-
-            // Gizli veri kutusunu bul
             const gizliVeri = kart.querySelector('.gizli-veri');
-            const detayMetni = gizliVeri.querySelector('.full-aciklama').innerHTML;
-            const gorseller = gizliVeri.querySelector('.gorsel-kaynak').innerHTML;
-            const linkler = gizliVeri.querySelector('.link-kaynak').innerHTML;
 
-            // 3. Modalı doldur
+            // 2. Başlığı Al
+            const baslik = kart.querySelector('h3').innerText;
             document.getElementById('modal-baslik').innerText = baslik;
-            document.getElementById('modal-aciklama').innerHTML = detayMetni;
-            document.getElementById('modal-gorseller').innerHTML = gorseller;
-            document.getElementById('modal-linkler').innerHTML = linkler;
 
-            // 4. Modalı göster (Flex yaparak ortalıyoruz)
+            // 3. Açıklamayı Kontrol Et ve Al
+            const aciklamaKaynak = gizliVeri.querySelector('.full-aciklama');
+            const modalAciklama = document.getElementById('modal-aciklama');
+
+            if (aciklamaKaynak) {
+                modalAciklama.innerHTML = aciklamaKaynak.innerHTML;
+            } else {
+                modalAciklama.innerHTML = ""; // Açıklama yoksa boş bırak
+            }
+
+            // 4. GÖRSELLERİ KONTROL ET (Sorunu Çözen Kısım)
+            const gorselKaynak = gizliVeri.querySelector('.gorsel-kaynak');
+            const modalGorselAlani = document.getElementById('modal-gorseller');
+
+            if (gorselKaynak) {
+                // Eğer kartta görsel varsa içeriği kopyala ve görünür yap
+                modalGorselAlani.innerHTML = gorselKaynak.innerHTML;
+                modalGorselAlani.style.display = 'flex';
+            } else {
+                // Eğer görsel YOKSA içeriği temizle ve alanı gizle (boşluk kalmasın)
+                modalGorselAlani.innerHTML = '';
+                modalGorselAlani.style.display = 'none';
+            }
+
+            // 5. Linkleri Kontrol Et ve Al
+            const linkKaynak = gizliVeri.querySelector('.link-kaynak');
+            const modalLinkler = document.getElementById('modal-linkler');
+
+            if (linkKaynak) {
+                modalLinkler.innerHTML = linkKaynak.innerHTML;
+            } else {
+                modalLinkler.innerHTML = '';
+            }
+
+            // 6. Modalı göster
             document.getElementById('proje-modal').style.display = 'flex';
-            // Body kaydırmasını kilitle (Arka plan kaymasın)
             document.body.style.overflow = 'hidden';
         }
 

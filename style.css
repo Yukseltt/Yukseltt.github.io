@@ -4,18 +4,18 @@ html {
 
 :root {
     /* Zemin Renkleri */
-    --zemin-ana: #000000;   
-    --zemin-kart: #111111;     
-    --zemin-header: #050505;   
+    --zemin-ana: #000000;
+    --zemin-kart: #111111;
+    --zemin-header: #050505;
 
     /* Yazı Renkleri */
-    --yazi-baslik: #ffffff;     
-    --yazi-genel: #b0b0b0;     
+    --yazi-baslik: #ffffff;
+    --yazi-genel: #b0b0b0;
 
     /* Vurgu ve Parlama Renkleri */
-    --neon-mavi: #00ffff;      
-    --neon-golge: rgba(0, 255, 255, 0.5); 
-    --neon-mor: #bc13fe; 
+    --neon-mavi: #00ffff;
+    --neon-golge: rgba(0, 255, 255, 0.5);
+    --neon-mor: #bc13fe;
 }
 
 /* --- TEMEL AYARLAR --- */
@@ -112,7 +112,7 @@ header nav {
 .profile-img:hover {
     transform: scale(1.1);
     border: 2px solid var(--neon-mavi);
-    box-shadow: 0 0 30px var(--neon-mavi); 
+    box-shadow: 0 0 30px var(--neon-mavi);
 }
 
 /* --- BUTONLAR --- */
@@ -123,7 +123,7 @@ header nav {
     padding: 10px 25px;
     border-radius: 5px;
     margin-top: 1rem;
-    
+
     border: 2px solid var(--neon-mavi);
     box-shadow: 0 0 10px var(--neon-golge);
     font-weight: bold;
@@ -160,18 +160,18 @@ h2 {
     background: var(--zemin-kart);
     padding: 25px;
     border-radius: 10px;
-    
-    border: 3px solid #333; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    
+
+    border: 3px solid #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
     transition: 0.3s ease;
 }
 
 /* Kartın üzerine gelince NEON ETKİSİ */
 .card:hover {
-    border-color: var(--neon-mavi); 
+    border-color: var(--neon-mavi);
     transform: translateY(-10px);
-    box-shadow: 0 0 25px var(--neon-golge); 
+    box-shadow: 0 0 25px var(--neon-golge);
 }
 
 .card h3 {
@@ -211,12 +211,17 @@ footer {
 @keyframes heartbeat {
     0% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(255, 159, 67, 0.7); /* Turuncu gölge başlangıcı */
+        box-shadow: 0 0 0 0 rgba(255, 159, 67, 0.7);
+        /* Turuncu gölge başlangıcı */
     }
+
     70% {
-        transform: scale(1.05); /* Hafifçe büyür */
-        box-shadow: 0 0 0 10px rgba(255, 159, 67, 0); /* Gölge genişleyerek kaybolur */
+        transform: scale(1.1);
+        /* Hafifçe büyür */
+        box-shadow: 0 0 0 10px rgba(255, 159, 67, 0);
+        /* Gölge genişleyerek kaybolur */
     }
+
     100% {
         transform: scale(1);
         box-shadow: 0 0 0 0 rgba(255, 159, 67, 0);
@@ -227,27 +232,37 @@ footer {
 .badge {
     display: inline-block;
     padding: 5px 12px;
-    border-radius: 20px; /* Hap şeklinde yuvarlaklık */
+    border-radius: 20px;
+    /* Hap şeklinde yuvarlaklık */
     font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 12px; /* Başlık ile arasına boşluk */
+    margin-bottom: 12px;
+    /* Başlık ile arasına boşluk */
 }
 
 /* 3. "Devam Ediyor" Stili (Animasyonlu) */
 .badge-devam {
-    background: rgba(255, 159, 67, 0.1); /* İçi şeffaf turuncu */
-    color: #ff9f43; /* Neon Turuncu Yazı */
-    border: 1px solid #ff9f43;
-    animation: heartbeat 2s infinite; /* Sonsuz döngüde animasyon */
+    background: rgba(255, 159, 67, 0.1);
+    /* İçi şeffaf turuncu */
+    color: #ff9f43;
+    /* Neon Turuncu Yazı */
+    border: 2px solid #ff9f43;
+    animation: heartbeat 2s infinite;
+    /* Sonsuz döngüde animasyon */
+    text-align: center;
 }
 
 /* 4. "Bitti" Stili (Sabit) */
 .badge-bitti {
-    background: rgba(46, 213, 115, 0.1); /* İçi şeffaf yeşil */
-    color: #2ed573; /* Neon Yeşil Yazı */
-    border: 1px solid #2ed573;
+    background: rgba(46, 213, 115, 0.1);
+    /* İçi şeffaf yeşil */
+    color: #2ed573;
+    /* Neon Yeşil Yazı */
+    border: 2px solid #2ed573;
+    text-align: center;
+
 }
 
 
@@ -265,7 +280,8 @@ footer {
     align-items: center;
     gap: 5px;
     transition: 0.3s;
-    border-bottom: 1px solid transparent; /* Alt çizgi efekti için */
+    border-bottom: 1px solid transparent;
+    /* Alt çizgi efekti için */
 }
 
 .detay-btn:hover {
@@ -274,7 +290,8 @@ footer {
 }
 
 .detay-btn i {
-    transition: transform 0.3s ease; /* Ok işaretinin dönmesi için */
+    transition: transform 0.3s ease;
+    /* Ok işaretinin dönmesi için */
 }
 
 /* Buton "aktif" olduğunda ok işareti dönsün */
@@ -285,9 +302,12 @@ footer {
 
 /* Gizli Alanın Dış Çerçevesi */
 .kart-detay {
-    max-height: 0; /* Başlangıçta yüksekliği 0 (yani kapalı) */
-    overflow: hidden; /* Taşanı gizle */
-    transition: max-height 0.4s ease-out; /* Kayarak açılma animasyonu */
+    max-height: 0;
+    /* Başlangıçta yüksekliği 0 (yani kapalı) */
+    overflow: hidden;
+    /* Taşanı gizle */
+    transition: max-height 0.4s ease-out;
+    /* Kayarak açılma animasyonu */
 }
 
 /* Gizli Alanın İçeriği */
@@ -323,23 +343,29 @@ footer {
 
 /* Görselin içinde duracağı kutu */
 .detay-gorsel-container {
-    margin-bottom: 20px; /* Yazı ile arasında boşluk bırak */
-    text-align: center;  /* Görseli ortala */
+    margin-bottom: 20px;
+    /* Yazı ile arasında boşluk bırak */
+    text-align: center;
+    /* Görseli ortala */
 }
 
 /* Görselin kendisi */
 .detay-img {
-    width: 100%;         /* Kartın genişliğine tam otursun (Mobil uyum için şart) */
-    height: auto;        /* En-boy oranı bozulmasın */
-    border-radius: 8px;  /* Köşeleri hafif yuvarlat */
-    
+    width: 100%;
+    /* Kartın genişliğine tam otursun (Mobil uyum için şart) */
+    height: auto;
+    /* En-boy oranı bozulmasın */
+    border-radius: 8px;
+    /* Köşeleri hafif yuvarlat */
+
     /* Karanlık tema için ince bir çerçeve */
-    border: 1px solid #333; 
-    
+    border: 1px solid #333;
+
     /* Hafif bir parlama (Glow) efekti (İstersen kaldırabilirsin) */
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1); 
-    
-    transition: transform 0.3s ease; /* Hover için hazırlık */
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+
+    transition: transform 0.3s ease;
+    /* Hover için hazırlık */
 }
 
 /* İsteğe bağlı: Üzerine gelince hafif büyüsün */
@@ -354,12 +380,14 @@ footer {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    overflow-x: auto; /* Çok resim varsa yana kaydırma cubugu cıksın */
+    overflow-x: auto;
+    /* Çok resim varsa yana kaydırma cubugu cıksın */
     padding-bottom: 5px;
 }
 
 .galeri-thumb {
-    width: 100px; /* Küçük resim boyutu */
+    width: 100px;
+    /* Küçük resim boyutu */
     height: 70px;
     object-fit: cover;
     border-radius: 5px;
@@ -375,16 +403,19 @@ footer {
 
 /* --- LIGHTBOX (MODAL) STİLLERİ --- */
 .lightbox {
-    display: none; /* Varsayılan olarak gizli */
+    display: none;
+    /* Varsayılan olarak gizli */
     position: fixed;
-    z-index: 20000; /* En üstte durması için */
+    z-index: 20000;
+    /* En üstte durması için */
     padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9); /* Arka plan karartma */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Arka plan karartma */
 }
 
 /* Büyük Resim */
@@ -392,18 +423,24 @@ footer {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 900px; /* Çok devasa olmasın */
-    max-height: 80vh; /* Ekrandan taşmasın */
+    max-width: 900px;
+    /* Çok devasa olmasın */
+    max-height: 80vh;
+    /* Ekrandan taşmasın */
     object-fit: contain;
-    border: 2px solid var(--neon-mavi);
-    box-shadow: 0 0 20px var(--neon-golge);
-    animation: zoom 0.4s; /* Açılış efekti */
+    animation: zoom 0.4s;
+    /* Açılış efekti */
 }
 
 /* Açılış Animasyonu */
 @keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
 }
 
 /* Kapatma Butonu (X) */
@@ -423,7 +460,8 @@ footer {
 }
 
 /* İleri/Geri Okları */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -443,7 +481,8 @@ footer {
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
     color: var(--neon-mavi);
 }
@@ -466,13 +505,16 @@ footer {
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #333;
-    
+
     /* SABİT YÜKSEKLİK AYARLARI */
-    height: 350px; /* Kartın boyu sabit */
+    height: 350px;
+    /* Kartın boyu sabit */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* İçerik ve butonu uca yasla */
-    overflow: hidden; /* Taşan içeriği gizle */
+    justify-content: space-between;
+    /* İçerik ve butonu uca yasla */
+    overflow: hidden;
+    /* Taşan içeriği gizle */
     transition: 0.3s ease;
 }
 
@@ -484,10 +526,13 @@ footer {
 /* Kart içindeki açıklama metni (Kısıtlı satır) */
 .card-ozet {
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* En fazla 3 satır göster */
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    /* En fazla 4 satır göster */
     -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis; /* Sığmazsa ... koy */
+    text-overflow: ellipsis;
+    /* Sığmazsa ... koy */
     color: var(--yazi-genel);
     margin-bottom: 10px;
 }
@@ -507,7 +552,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: auto; /* Butonu en alta it */
+    margin-top: auto;
+    /* Butonu en alta it */
     transition: 0.3s;
 }
 
@@ -518,13 +564,15 @@ footer {
 
 /* --- MERKEZİ MODAL TASARIMI --- */
 .modal-overlay {
-    display: none; /* Varsayılan gizli */
+    display: none;
+    /* Varsayılan gizli */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Arka plan karartma */
+    background: rgba(0, 0, 0, 0.85);
+    /* Arka plan karartma */
     z-index: 10000;
     justify-content: center;
     align-items: center;
@@ -534,20 +582,30 @@ footer {
 .modal-content {
     background: var(--zemin-kart);
     width: 100%;
-    max-width: 800px; /* Pencere genişliği */
-    max-height: 90vh; /* Ekrandan taşmasın */
+    max-width: 800px;
+    /* Pencere genişliği */
+    max-height: 90vh;
+    /* Ekrandan taşmasın */
     padding: 30px;
     border-radius: 10px;
-    border: 2px solid var(--neon-mavi);
-    box-shadow: 0 0 30px var(--neon-golge);
-    overflow-y: auto; /* İçerik uzunsa kaydırma çubuğu çıksın */
+
+
+    overflow-y: auto;
+    /* İçerik uzunsa kaydırma çubuğu çıksın */
     position: relative;
     animation: zoomIn 0.3s ease;
 }
 
 @keyframes zoomIn {
-    from {transform: scale(0.8); opacity: 0;}
-    to {transform: scale(1); opacity: 1;}
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .modal-close {
@@ -559,5 +617,12 @@ footer {
     cursor: pointer;
 }
 
-.modal-close:hover { color: var(--neon-mavi); }
-.modal-text { margin-top: 20px; line-height: 1.8; color: #ddd; }
+.modal-close:hover {
+    color: var(--neon-mavi);
+}
+
+.modal-text {
+    margin-top: 20px;
+    line-height: 1.8;
+    color: #ddd;
+}
