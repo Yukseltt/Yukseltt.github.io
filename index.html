@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erhan Yüksel Turgut - Portföy</title>
+    <title>Erhan Yüksel Turgut</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,7 +14,7 @@
 
     <header>
         <nav class="container">
-            <div class="logo">Erhan Yüksel Turgut</div>
+            <div class="logo">Portföy</div>
             <ul class="nav-links">
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#projeler">Projeler</a></li>
@@ -26,7 +26,13 @@
 
     <section class="hero">
         <div class="container">
-            <img src="images/my_photo.jpeg" alt="Erhan Yüksel Turgut" class="profile-img">
+            <!-- Profil Fotoğrafı: Tıklandığında büyük gösterilir -->
+            <div class="profile-container" onclick="profilBuyut()">
+                <img src="images/my_photo.jpeg" alt="Erhan Yüksel Turgut" class="profile-img" id="hero-profil-img">
+                <div class="profile-overlay">
+                    <i class="fas fa-magnifying-glass"></i>
+                </div>
+            </div>
 
             <h1>Merhaba, Ben Erhan Yüksel Turgut</h1>
             <h3>Atatürk Üniversitesi Bilgisayar Mühendisliği 4. Sınıf Öğrencisiyim.</h3>
@@ -51,7 +57,6 @@
             <!--Mediko - Yemek & Bakiye-->
             <div class="card">
 
-                <span class="badge badge-bitti">Tamamlandı</span>
 
                 <h3>Mediko - Yemek & Bakiye Mobil Uygulaması</h3>
 
@@ -115,7 +120,7 @@
 
             <!--MR Görüntülerinden Beyin Tümörü Analizi-->
             <div class="card">
-                <span class="badge badge-bitti">Tamamlandı</span>
+
                 <h3>MR Görüntülerinden Beyin Tümörü Analizi</h3>
 
                 <p class="card-ozet">
@@ -176,8 +181,6 @@
 
             <!--DeskFinder - Görüntü İşleme Projesi-->
             <div class="card">
-
-                <span class="badge badge-bitti">Tamamlandı</span>
 
                 <h3>DeskFinder - Görüntü İşleme Projesi</h3>
 
@@ -463,6 +466,23 @@
             if (event.target.id === 'proje-modal') {
                 modalKapatButon();
             }
+        }
+
+        // --- PROFİL FOTOĞRAFI BÜYÜTME ---
+        // Hero bölümündeki profil fotoğrafına tıklandığında lightbox açar
+        function profilBuyut() {
+            const profilImg = document.getElementById('hero-profil-img');
+            
+            // Mevcut galeri sistemini kullanarak tek fotoğraf göster
+            mevcutGaleriResimleri = [{
+                src: profilImg.src,
+                alt: profilImg.alt
+            }];
+            mevcutSlaytIndex = 0;
+            
+            // Lightbox'ı aç
+            guncelleLightbox();
+            document.getElementById('lightbox-modal').style.display = 'block';
         }
     </script>
 </body>

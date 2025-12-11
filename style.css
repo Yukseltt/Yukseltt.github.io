@@ -32,10 +32,23 @@ body {
     line-height: 1.6;
 }
 
+
+header .container,
+.hero .container,
+footer .container {
+    padding: 0 3vw;
+}
+
 .container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    
+}
+
+#hakkimda.container,
+#projeler.container {
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 a {
@@ -99,21 +112,67 @@ header nav {
     margin-bottom: 1rem;
 }
 
-/* Profil Fotoğrafı */
-.profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+/* ===========================================
+   PROFİL FOTOĞRAFI STİLLERİ (Hero Bölümü)
+   - Yuvarlak profil fotoğrafı
+   - Hover'da büyüteç ikonu görünür + hafif büyüme
+   - Tıklandığında lightbox ile büyük gösterim
+   =========================================== */
+
+/* Profil Container: Fotoğraf ve overlay'i sarar */
+.profile-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto 20px;
+    cursor: pointer;
 }
 
-.profile-img:hover {
-    transform: scale(1.1);
-    border: 2px solid var(--neon-mavi);
-    box-shadow: 0 0 30px var(--neon-mavi);
+/* Profil Fotoğrafı: Yuvarlak, minimal çerçeve */
+.profile-img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
+
+/* Overlay: Hover'da görünen ikon katmanı */
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Büyüteç İkonu: Sağ alt köşede */
+.profile-overlay i {
+    position: absolute;
+    bottom: 150px;
+    right: 140px;
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+/* Hover Efekti: Fotoğraf hafif büyür */
+.profile-container:hover .profile-img {
+    transform: scale(1.08);
+}
+
+/* Hover Efekti: Overlay (ikon) görünür olur */
+.profile-container:hover .profile-overlay {
+    opacity: 0.9;
+}
+
 
 /* --- BUTONLAR --- */
 .btn {
@@ -507,7 +566,7 @@ footer {
     border: 1px solid #333;
 
     /* SABİT YÜKSEKLİK AYARLARI */
-    height: 350px;
+    height: 325px;
     /* Kartın boyu sabit */
     display: flex;
     flex-direction: column;
@@ -526,8 +585,8 @@ footer {
 /* Kart içindeki açıklama metni (Kısıtlı satır) */
 .card-ozet {
     display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
     /* En fazla 4 satır göster */
     -webkit-box-orient: vertical;
     overflow: hidden;
