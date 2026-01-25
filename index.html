@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <!-- Plexus Arkaplan Canvas -->
+    <canvas id="plexus-canvas"></canvas>
 
     <header>
         <nav class="container">
@@ -19,7 +21,6 @@
                 <li><a href="#hakkimda">Hakkımda</a></li>
                 <li><a href="#projeler">Projeler</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
-                <a href="CV_ErhanYukselTurgut.pdf" download>CV</a>
             </ul>
         </nav>
     </header>
@@ -41,19 +42,22 @@
     </section>
 
     <section id="hakkimda" class="container section-padding">
-        <h2>Hakkımda</h2>
-        <p>Bir bilgisayar mühendisi adayı olarak, en büyük tutkum teorik bilgilerimi pratik uygulamalara dönüştürmektir.
-            Bu tutkunun ışığında birçok alanda projeler geliştirdim ve yarışmalarda yer aldım. Şuanda Makine Öğrenmesi
-            ve Görüntü İşleme alanlarında çalışıyorum. Bu alanlarda projeler geliştirerek deneyim elde ediyorum.</p>
-        <p>Ayrıca ilgilendiğim bir diğer alan mobil uygulama geliştirmektir. ATAUNI OBS mobil uygulaması klonu ve MEDİKO
-            - Yemek & Bakiye gibi geliştirdiğim uygulamalar bulunmaktadır. Mediko uygulaması ile öğrenci arkadaşlarıma
-            günlük yemek menüsü ve bakiye bilgisi sorgulama imkanı sunuyorum. Bu proje canlı olarak App Store ve Play
-            Store'da ücretsiz olarak erişilebilir.</p>
+        <div class="section-box">
+            <h2>Hakkımda</h2>
+            <p>Bir bilgisayar mühendisi adayı olarak, en büyük tutkum teorik bilgilerimi pratik uygulamalara dönüştürmektir.
+                Bu tutkunun ışığında birçok alanda projeler geliştirdim ve yarışmalarda yer aldım. Şuanda Makine Öğrenmesi
+                ve Görüntü İşleme alanlarında çalışıyorum. Bu alanlarda projeler geliştirerek deneyim elde ediyorum.</p>
+            <p>Ayrıca ilgilendiğim bir diğer alan mobil uygulama geliştirmektir. ATAUNI OBS mobil uygulaması klonu ve MEDİKO
+                - Yemek & Bakiye gibi geliştirdiğim uygulamalar bulunmaktadır. Mediko uygulaması ile öğrenci arkadaşlarıma
+                günlük yemek menüsü ve bakiye bilgisi sorgulama imkanı sunuyorum. Bu proje canlı olarak App Store ve Play
+                Store'da ücretsiz olarak erişilebilir.</p>
+        </div>
     </section>
 
     <section id="projeler" class="container section-padding">
-        <h2>Projelerim</h2>
-        <div class="project-grid">
+        <div class="section-box">
+            <h2>Projelerim</h2>
+            <div class="project-grid">
             <!--Mediko - Yemek & Bakiye-->
             <div class="card">
 
@@ -251,6 +255,7 @@
             </div>
 
 
+            </div>
         </div>
     </section>
 
@@ -258,26 +263,26 @@
 
     <footer>
         <section id="iletisim" class="container section-padding">
-            <h2>İletişim</h2>
-            <p>
-                İletişim için
-                <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
-                ve
-                <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
-                mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
-            </p>
+                <h2>İletişim</h2>
+                <p>
+                    İletişim için
+                    <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
+                    ve
+                    <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
+                    mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
+                </p>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/" target="_blank"
-                    rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/" target="_blank"
+                        rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
 
-                <a href="https://github.com/Yukseltt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
+                    <a href="https://github.com/Yukseltt" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
 
-            </div>
+                </div>
         </section>
     </footer>
 
@@ -485,6 +490,8 @@
             document.getElementById('lightbox-modal').style.display = 'block';
         }
     </script>
+    <!-- Plexus Arkaplan Animasyonu -->
+    <script src="particles.js"></script>
 </body>
 
 </html>

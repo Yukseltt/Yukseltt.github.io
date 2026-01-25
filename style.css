@@ -32,6 +32,18 @@ body {
     line-height: 1.6;
 }
 
+/* --- PLEXUS ARKAPLANİ --- */
+#plexus-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--zemin-ana);
+    pointer-events: none;
+}
+
 
 header .container,
 .hero .container,
@@ -95,21 +107,31 @@ header nav {
 
 /* --- HERO SECTION --- */
 .hero {
-    height: 80vh;
-    background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding-top: 100px;
-    min-height: 100vh;
+    padding: 120px 20px 60px 20px;
+    min-height: auto;
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .hero h1 {
     font-size: 3rem;
     color: var(--yazi-baslik);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h3, .hero p {
+    max-width: 800px;
 }
 
 /* ===========================================
@@ -122,16 +144,17 @@ header nav {
 /* Profil Container: Fotoğraf ve overlay'i sarar */
 .profile-container {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto 20px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 /* Profil Fotoğrafı: Yuvarlak, minimal çerçeve */
 .profile-img {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
@@ -152,13 +175,13 @@ header nav {
     transition: opacity 0.3s ease;
 }
 
-/* Büyüteç İkonu: Sağ alt köşede */
+/* Büyüteç İkonu: Ortada */
 .profile-overlay i {
     position: absolute;
-    bottom: 150px;
-    right: 140px;
+    bottom: 100px;
+    right: 100px;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 8px;
     border-radius: 50%;
 }
@@ -198,6 +221,17 @@ header nav {
 /* --- BÖLÜMLER GENEL --- */
 .section-padding {
     padding: 60px 0;
+}
+
+/* Yarı şeffaf içerik kutusu */
+.section-box {
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
 }
 
 h2 {
@@ -684,4 +718,52 @@ footer {
     margin-top: 20px;
     line-height: 1.8;
     color: #ddd;
+}
+
+/* --- RESPONSIVE TASARIM --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h3 {
+        font-size: 1rem;
+    }
+
+    .profile-container,
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-overlay i {
+        bottom: 70px;
+        right: 70px;
+        font-size: 1.5rem;
+    }
+
+    .section-box {
+        padding: 25px 20px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-container,
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-overlay i {
+        bottom: 55px;
+        right: 55px;
+    }
 }
