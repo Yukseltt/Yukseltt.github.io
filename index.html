@@ -4,10 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erhan Yüksel Turgut</title>
+    <title>Erhan Yüksel Turgut | Bilgisayar Mühendisi · Makine Öğrenmesi & Görüntü İşleme</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Erhan Yüksel Turgut — Bilgisayar Mühendisi. Makine öğrenmesi, derin öğrenme, görüntü işleme ve mobil uygulama projeleri. MEDİKO, DeskFinder, Akıllı Kampüs ve daha fazlası.">
+    <meta name="author" content="Erhan Yüksel Turgut">
+    <meta name="keywords"
+        content="Erhan Yüksel Turgut, Bilgisayar Mühendisi, Makine Öğrenmesi, Derin Öğrenme, Görüntü İşleme, Flutter, Python, Portföy">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://www.erhanyukselturgut.com/">
+
+    <!-- Open Graph (LinkedIn / WhatsApp / Facebook önizlemesi) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Erhan Yüksel Turgut | Bilgisayar Mühendisi">
+    <meta property="og:description"
+        content="Makine öğrenmesi, görüntü işleme ve mobil uygulama projeleri. Yayında ürünler ve detaylı proje anlatımları.">
+    <meta property="og:image" content="https://www.erhanyukselturgut.com/images/my_photo.jpeg">
+    <meta property="og:url" content="https://www.erhanyukselturgut.com/">
+    <meta property="og:locale" content="tr_TR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Erhan Yüksel Turgut | Bilgisayar Mühendisi">
+    <meta name="twitter:description" content="Makine öğrenmesi, görüntü işleme ve mobil uygulama projeleri.">
+    <meta name="twitter:image" content="https://www.erhanyukselturgut.com/images/my_photo.jpeg">
+
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Yapısal veri (Google için Person şeması) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Erhan Yüksel Turgut",
+      "jobTitle": "Bilgisayar Mühendisi",
+      "url": "https://www.erhanyukselturgut.com/",
+      "email": "erhanyukselturgut@gmail.com",
+      "image": "https://www.erhanyukselturgut.com/images/my_photo.jpeg",
+      "sameAs": [
+        "https://github.com/Yukseltt",
+        "https://www.linkedin.com/in/erhan-y%C3%BCksel-turgut-b098172b8/"
+      ],
+      "knowsAbout": ["Makine Öğrenmesi", "Derin Öğrenme", "Görüntü İşleme", "Mobil Uygulama Geliştirme", "Flutter", "Python"]
+    }
+    </script>
 </head>
 
 <body>
@@ -27,16 +71,26 @@
     <section class="hero">
         <div class="container">
             <!-- Profil Fotoğrafı: Tıklandığında büyük gösterilir -->
-            <div class="profile-container" onclick="profilBuyut()">
+            <div class="profile-container" onclick="profilBuyut()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();profilBuyut();}"
+                role="button" tabindex="0" aria-label="Profil fotoğrafını büyüt">
                 <img src="images/my_photo.jpeg" alt="Erhan Yüksel Turgut" class="profile-img" id="hero-profil-img">
                 <div class="profile-overlay">
                     <i class="fas fa-magnifying-glass"></i>
                 </div>
             </div>
 
-            <h1>Merhaba</h1>
-            <h3>Bu site benim ve projelerim hakkında bilgiler içermektedir.</h3>
-            <p>Erhan Yüksel Turgut</p>
+            <h1>Erhan Yüksel Turgut</h1>
+            <h3>Bilgisayar Mühendisi · Makine Öğrenmesi &amp; Görüntü İşleme</h3>
+            <p>Teorik bilgiyi gerçek dünyada karşılığı olan, yayında ürünlere dönüştürüyorum.</p>
+
+            <div class="hero-actions">
+                <a href="CV_ErhanYukselTurgut.pdf" download class="hero-btn hero-btn-primary">
+                    <i class="fas fa-download"></i> CV İndir
+                </a>
+                <a href="#projeler" class="hero-btn hero-btn-ghost">
+                    <i class="fas fa-folder-open"></i> Projelerim
+                </a>
+            </div>
         </div>
     </section>
 
@@ -108,10 +162,10 @@
 
                         <div class="gorsel-kaynak">
                             <div class="galeri-grid">
-                                <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/mediko_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Menü Sayfası">
 
-                                <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/mediko_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Bakiye Sorgulama Sayfası">
                             </div>
                         </div>
@@ -239,14 +293,14 @@
 
                         <div class="gorsel-kaynak">
                             <div class="galeri-grid">
-                                <img src="images/deskfinder_1.png" onclick="acLightbox(this)" class="galeri-thumb"
-                                    alt="Menü Sayfası">
+                                <img src="images/deskfinder_1.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
+                                    alt="DeskFinder - Masa doluluk tespiti arayüzü 1">
 
-                                <img src="images/deskfinder_2.png" onclick="acLightbox(this)" class="galeri-thumb"
-                                    alt="Bakiye Sorgulama Sayfası">
+                                <img src="images/deskfinder_2.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
+                                    alt="DeskFinder - YOLO ile nesne algılama 2">
 
-                                <img src="images/deskfinder_3.png" onclick="acLightbox(this)" class="galeri-thumb"
-                                    alt="Bakiye Sorgulama Sayfası">
+                                <img src="images/deskfinder_3.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
+                                    alt="DeskFinder - Boş/dolu masa işaretleme 3">
                             </div>
                         </div>
 
@@ -322,28 +376,28 @@
 
                         <div class="gorsel-kaynak">
                             <div class="galeri-grid">
-                                <img src="images/akillikampus_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_1.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Normal Kullancı Ana Sayfası">
 
-                                <img src="images/akillikampus_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_2.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Üniversitedeki Tüm Bildirimler Sayfası">
 
-                                <img src="images/akillikampus_3.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_3.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Yeni Bildirim Oluşturma Sayfası">
 
-                                <img src="images/akillikampus_4.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_4.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Kampüs Haritası Sayfası">
 
-                                <img src="images/akillikampus_5.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_5.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Bildirim Türüne Göre Filtreleme Menüsü">
 
-                                <img src="images/akillikampus_6.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_6.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Kullanıcı Ayarlar Sayfası">
 
-                                <img src="images/akillikampus_7.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_7.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Üniversite Admini Ana Sayfası">
 
-                                <img src="images/akillikampus_8.jpeg" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/akillikampus_8.jpeg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Süper Admin Alert (Acil Durum Bildirimi Gönderme) Sayfası">
                             </div>
                         </div>
@@ -404,28 +458,28 @@
 
                         <div class="gorsel-kaynak">
                             <div class="galeri-grid">
-                                <img src="images/dyt-1.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-1.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Blog Ana Sayfası">
 
-                                <img src="images/dyt-2.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-2.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Blog Yazısı Detay Sayfası - 1">
 
-                                <img src="images/dyt-3.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-3.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Blog Yazısı Detay Sayfası - 2">
 
-                                <img src="images/dyt-4.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-4.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Kategoriler Sayfası">
 
-                                <img src="images/dyt-5.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-5.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Blog Yazısı Arama Sayfası">
 
-                                <img src="images/dyt-6.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-6.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Admin Panel - 1">
 
-                                <img src="images/dyt-7.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-7.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Admin Panel - 2">
 
-                                <img src="images/dyt-8.png" onclick="acLightbox(this)" class="galeri-thumb"
+                                <img src="images/dyt-8.jpg" onclick="acLightbox(this)" class="galeri-thumb" loading="lazy" tabindex="0" role="button"
                                     alt="Admin Panel - 3">
                             </div>
                         </div>
@@ -452,9 +506,7 @@
             <p>
                 İletişim için
                 <a href="mailto:erhanyukselturgut@gmail.com" class="mail-link">erhanyukselturgut@gmail.com</a>
-                ve
-                <a href="mailto:yt10089@gmail.com" class="mail-link">yt10089@gmail.com</a>
-                mail adreslerini veya aşağıdaki bağlantıları kullanabilirsiniz.
+                mail adresini veya aşağıdaki bağlantıları kullanabilirsiniz.
             </p>
 
             <div class="social-links">
@@ -499,29 +551,15 @@
     </div>
 
     <script>
-        // Kart Açma/Kapama Fonksiyonu
-        function kartAc(buton) {
-            // 1. Tıklanan butondan sonra gelen gizli alanı bul
-            var detayAlani = buton.nextElementSibling;
-
-            // 2. Butona 'aktif' sınıfını ekle/çıkar (Ok işaretini döndürmek için)
-            buton.classList.toggle("aktif");
-
-            // 3. Yükseklik ayarı ile açma/kapama yap
-            if (detayAlani.style.maxHeight) {
-                // Zaten açıksa kapat (Yüksekliği sıfırla)
-                detayAlani.style.maxHeight = null;
-                buton.innerHTML = 'Detayları Gör <i class="fas fa-chevron-down"></i>'; // Yazıyı eski haline getir
-            } else {
-                // Kapalıysa aç (İçeriğin gerçek yüksekliği kadar yer aç)
-                detayAlani.style.maxHeight = detayAlani.scrollHeight + "px";
-                buton.innerHTML = 'Kapat <i class="fas fa-chevron-up"></i>'; // Yazıyı değiştir
-
-                // Ok işaretini CSS ile döndürdüğümüz için tekrar i class'ını düzeltmemize gerek yok ama
-                // Yazıyı değiştirdiğimiz için ikon siliniyor, yukarıdaki satırda ikonu tekrar ekledim.
+        // Galeri görsellerinde klavye erişimi: Enter/Space ile lightbox aç
+        document.addEventListener('keydown', function (event) {
+            const odak = document.activeElement;
+            if (odak && odak.classList.contains('galeri-thumb') &&
+                (event.key === 'Enter' || event.key === ' ')) {
+                event.preventDefault();
+                acLightbox(odak);
             }
-        }
-
+        });
 
         // --- LIGHTBOX GALERİ SİSTEMİ ---
 

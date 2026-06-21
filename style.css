@@ -134,6 +134,61 @@ header nav {
     max-width: 800px;
 }
 
+.hero h3 {
+    color: var(--neon-mavi);
+    font-weight: 600;
+}
+
+/* Hero buton grubu (CV İndir / Projelerim) */
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 26px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.hero-btn-primary {
+    background: var(--neon-mavi);
+    color: #001014;
+    box-shadow: 0 0 18px var(--neon-golge);
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px var(--neon-mavi);
+}
+
+.hero-btn-ghost {
+    border: 1.5px solid var(--neon-mor);
+    color: var(--yazi-baslik);
+}
+
+.hero-btn-ghost:hover {
+    transform: translateY(-3px);
+    background: rgba(188, 19, 254, 0.15);
+    box-shadow: 0 0 20px rgba(188, 19, 254, 0.5);
+}
+
+/* Klavye erişilebilirliği: odak göstergesi */
+.profile-container:focus-visible,
+.galeri-thumb:focus-visible,
+.hero-btn:focus-visible {
+    outline: 3px solid var(--neon-mavi);
+    outline-offset: 3px;
+}
+
 /* ===========================================
    PROFİL FOTOĞRAFI STİLLERİ (Hero Bölümü)
    - Yuvarlak profil fotoğrafı
