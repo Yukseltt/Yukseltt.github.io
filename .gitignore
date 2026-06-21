@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Editör / IDE ayarları (yerel)
+.vscode/
+.claude/
+
+# Ortam değişkenleri / gizli bilgiler
+.env
+.env.*
+*.local
