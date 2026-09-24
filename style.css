@@ -50,6 +50,7 @@ html {
 }
 
 body {
+    overflow-wrap: break-word;
     background: var(--zemin);
     color: var(--murekkep-orta);
     font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
@@ -776,13 +777,23 @@ footer nav {
     .bolum-basi,
     .iki-sutun,
     .kayit,
+    .olay,
+    .sertifika,
     .iletisim-liste div {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
+    .olay-tarih {
+        padding-top: 0;
+    }
+
     .kunye-tablo th {
         width: 130px;
+    }
+
+    .ray {
+        position: static;
     }
 
     .ray .no {
@@ -903,17 +914,6 @@ footer nav {
     margin-bottom: 8px;
 }
 
-@media (max-width: 760px) {
-    .olay,
-    .sertifika {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .olay-tarih {
-        padding-top: 0;
-    }
-}
 
 /* Kayıt Dışı koyu zeminde: çizgi ve metin renkleri ters çevrilir */
 .bolum-koyu .olaylar,
