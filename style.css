@@ -862,12 +862,12 @@ footer nav {
 }
 
 /* Belgeler: sertifika kayıtları */
-.belgeler {
+.sertifikalar {
     border-top: 1px solid var(--cizgi-ince);
     margin-top: 46px;
 }
 
-.belge {
+.sertifika {
     border-bottom: 1px solid var(--cizgi-ince);
     padding: 22px 0 24px;
     display: grid;
@@ -876,25 +876,25 @@ footer nav {
     align-items: start;
 }
 
-.belge figure {
+.sertifika figure {
     margin: 0;
     border: 1px solid var(--cizgi-ince);
     background: var(--kagit-bant);
 }
 
-.belge figure img {
+.sertifika figure img {
     display: block;
     width: 100%;
     height: auto;
     cursor: zoom-in;
 }
 
-.belge h3 {
+.sertifika h3 {
     font-size: 1.05rem;
     margin-bottom: 4px;
 }
 
-.belge-veren {
+.sertifika-veren {
     font-family: 'DM Mono', 'IBM Plex Mono', monospace;
     font-size: 0.76rem;
     letter-spacing: 0.04em;
@@ -904,7 +904,7 @@ footer nav {
 
 @media (max-width: 760px) {
     .olay,
-    .belge {
+    .sertifika {
         grid-template-columns: 1fr;
         gap: 12px;
     }
@@ -917,13 +917,13 @@ footer nav {
 /* Kayıt Dışı koyu zeminde: çizgi ve metin renkleri ters çevrilir */
 .bolum-koyu .olaylar,
 .bolum-koyu .olay,
-.bolum-koyu .belgeler,
-.bolum-koyu .belge {
+.bolum-koyu .sertifikalar,
+.bolum-koyu .sertifika {
     border-color: var(--cizgi-koyu);
 }
 
 .bolum-koyu .olay h3,
-.bolum-koyu .belge h3 {
+.bolum-koyu .sertifika h3 {
     color: var(--kagit);
 }
 
@@ -932,11 +932,11 @@ footer nav {
 }
 
 .bolum-koyu .olay-yer,
-.bolum-koyu .belge-veren {
+.bolum-koyu .sertifika-veren {
     color: var(--kagit-koyu);
 }
 
-.bolum-koyu .belge figure {
+.bolum-koyu .sertifika figure {
     border-color: var(--cizgi-koyu);
     background: var(--murekkep-orta);
 }
