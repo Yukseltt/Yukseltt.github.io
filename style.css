@@ -52,10 +52,9 @@ html {
 body {
     background: var(--zemin);
     color: var(--murekkep-orta);
-    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-    font-optical-sizing: auto;
-    font-size: 18px;
-    font-weight: 420;
+    font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
     line-height: 1.7;
 }
 
@@ -113,7 +112,7 @@ header .sayfa {
 }
 
 .kunye-ad {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.84rem;
     letter-spacing: 0.16em;
@@ -124,7 +123,7 @@ header .sayfa {
 nav ul {
     display: flex;
     gap: 26px;
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.78rem;
     letter-spacing: 0.1em;
@@ -175,7 +174,7 @@ main > section:last-of-type::after {
     z-index: 2;
     background: var(--kiremit);
     color: var(--murekkep);
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.66rem;
     line-height: 1;
@@ -218,7 +217,7 @@ main > section:last-of-type::after {
 }
 
 .portre-alt {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.72rem;
     letter-spacing: 0.08em;
@@ -248,7 +247,7 @@ main > section:last-of-type::after {
 .kunye-tablo {
     width: 100%;
     border-collapse: collapse;
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.82rem;
     letter-spacing: 0.04em;
@@ -328,7 +327,7 @@ main > section:last-of-type::after {
 }
 
 .bolum-no {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.78rem;
     letter-spacing: 0.14em;
@@ -358,7 +357,7 @@ main > section:last-of-type::after {
 }
 
 .yan-not {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.76rem;
     line-height: 1.9;
@@ -396,7 +395,7 @@ main > section:last-of-type::after {
 }
 
 .ray {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.74rem;
     line-height: 1.85;
@@ -428,9 +427,9 @@ main > section:last-of-type::after {
 
 .kayit h3 {
     font-size: clamp(1.45rem, 2.6vw, 1.9rem);
-    font-weight: 560;
-    line-height: 1.16;
-    letter-spacing: -0.02em;
+    font-weight: 600;
+    line-height: 1.18;
+    letter-spacing: -0.024em;
     color: var(--murekkep);
     margin-bottom: 14px;
 }
@@ -459,7 +458,7 @@ main > section:last-of-type::after {
 
 .olcum .deger {
     display: block;
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 1.15;
@@ -469,7 +468,7 @@ main > section:last-of-type::after {
 }
 
 .olcum .ad {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.7rem;
     letter-spacing: 0.1em;
@@ -484,7 +483,7 @@ main > section:last-of-type::after {
     border: 1px solid var(--cizgi-koyu);
     border-radius: var(--radius);
     color: var(--murekkep);
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
@@ -520,7 +519,7 @@ main > section:last-of-type::after {
 }
 
 .etiketler {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.74rem;
     letter-spacing: 0.08em;
@@ -552,7 +551,7 @@ main > section:last-of-type::after {
 }
 
 .plaka figcaption {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.7rem;
     letter-spacing: 0.07em;
@@ -566,7 +565,7 @@ main > section:last-of-type::after {
     flex-wrap: wrap;
     gap: 22px;
     margin-top: 22px;
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.78rem;
     letter-spacing: 0.06em;
@@ -575,7 +574,7 @@ main > section:last-of-type::after {
 
 /* --- İLETİŞİM / ALT BANT --- */
 .iletisim-liste {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.8rem;
     letter-spacing: 0.04em;
@@ -600,7 +599,7 @@ footer {
     background: var(--bant);
     border-top: 1px solid var(--cizgi-koyu);
     padding: 30px 0 34px;
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.74rem;
     letter-spacing: 0.06em;
@@ -650,7 +649,7 @@ footer nav {
 
 .buyutec-alt,
 .buyutec button {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.76rem;
     letter-spacing: 0.1em;
@@ -750,7 +749,7 @@ footer nav {
 }
 
 .belge .tarih {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.76rem;
     letter-spacing: 0.1em;
@@ -837,7 +836,7 @@ footer nav {
 }
 
 .olay-tarih {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.74rem;
     letter-spacing: 0.06em;
@@ -852,7 +851,7 @@ footer nav {
 }
 
 .olay-yer {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-size: 0.76rem;
     letter-spacing: 0.04em;
     color: var(--murekkep-orta);
@@ -897,7 +896,7 @@ footer nav {
 }
 
 .sertifika-veren {
-    font-family: 'DM Mono', 'IBM Plex Mono', monospace;
+    font-family: 'JetBrains Mono', 'IBM Plex Mono', monospace;
     font-size: 0.76rem;
     letter-spacing: 0.04em;
     color: var(--murekkep-orta);
