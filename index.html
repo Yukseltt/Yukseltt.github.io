@@ -203,7 +203,7 @@
                         <div>
                             <h3>Medikal Görüntüde Tespit, Segmentasyon ve Gerçek Zamanlı Çıkarım</h3>
                             <p class="kayit-ozet">
-                                PeraSoft stajında mamografi, meme ultrasonu ve beyin MR verilerinde tespit, segmentasyon ve sınıflandırma modelleri geliştirdim. Beş ayrı alt proje, her biri kendi ölçüm protokolü ve sonuç raporuyla yürütüldü.
+                                PeraSoft stajında mamografi, meme ultrasonu ve beyin MR verilerinde tespit, segmentasyon ve sınıflandırma modelleri geliştirdim. Beş alt proje, her biri kendi sonuç raporuyla.
                             </p>
 
                             <div class="olcum">
@@ -417,11 +417,8 @@
                         <div>
                             <h3>MR Görüntülerinden Beyin Tümörü Analizi</h3>
                             <p class="kayit-ozet">
-                                Transfer öğrenme tabanlı hibrit mimarilerle sıfırdan tasarladığım CNN modellerinin
-                                performansını karşılaştırdım. MobileNetV2 ve ResNet50 tabanlı hibrit model ince ayar
-                                sonrası %99,61 F1 skoru verdi; sıfırdan geliştirdiğim EYTV10 modeli %99,01 F1 skoruna
-                                ulaştı.
-                            </p>
+                                Sıfırdan tasarladığım EytNet ailesini hazır omurgalar ve hibrit mimarilerle aynı veri
+                                setinde karşılaştırdım. On iki model eğitildi; en iyi sonucu EytNet_V1 verdi.</p>
 
                             <div class="olcum">
                                 <div>
@@ -450,11 +447,10 @@
                                     biçimde üzerinde.
                                 </p>
                                 <p>
-                                    Çalışmanın asıl bulgusu şu: V1'in üzerine Depthwise Separable Conv, SE Block,
+                                    V1'in üzerine Depthwise Separable Conv, SE Block,
                                     MixUp, SWA ve etiket yumuşatmayı birlikte ekleyen EytNet_V1_Opt varyantı daha iyi
-                                    genellemedi, tam tersine F1 0.9464'e düştü. Küçük veri setinde bu tekniklerin
-                                    toplamı kapasiteyi fazla kısıtlayıp underfitting yarattı. Tek tek makul olan
-                                    iyileştirmelerin bir arada neden ölçülmesi gerektiğini gösteren somut bir örnek.
+                                    genellemedi; F1 0.9464'e düştü. Küçük veri setinde bu tekniklerin toplamı
+                                    kapasiteyi fazla kısıtlayıp underfitting yarattı.
                                 </p>
                                 <p>
                                     Değerlendirmede doğruluk, kesinlik, duyarlılık, özgüllük, F1, Cohen's Kappa ve
@@ -548,7 +544,8 @@
                         <div>
                             <h3>Text Humanizer: Yerel Çalışan Metin İnsanlaştırıcı</h3>
                             <p class="kayit-ozet">
-                                Yapay zekâ üretimi metinleri insan kaleminden çıkmış gibi yeniden yazan, tamamen yerel çalışan araç. Kural tabanlı kipler internet bağlantısı olmadan çalışır.
+                                Yapay zekâ üretimi metinleri yeniden yazan, yerel çalışan araç. Kural tabanlı kipler
+                                internet bağlantısı gerektirmez.
                             </p>
 
                             <div class="olcum">
