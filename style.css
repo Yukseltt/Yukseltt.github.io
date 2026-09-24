@@ -8,23 +8,25 @@
 /* Palet: Calcite
    #DDDCDB nötr / #FD7B41 ana renk / #EDBF9B yumuşak yüzey / #3C4044 mürekkep */
 :root {
-    /* Nötr aile: tek bir gri aile, açıktan koyuya */
-    --kagit:         #f0efee;
-    --kagit-bant:    #dddcdb;
-    --kagit-koyu:    #c9c8c6;
-    --cizgi:         #b7b6b4;
-    --cizgi-ince:    #cfcecc;
-    --cizgi-koyu:    #565b60;
-    --murekkep:      #3c4044;
-    --murekkep-orta: #4b5055;
+    /* Nötr aile: derin mürekkep zeminden buz beyazı metne */
+    --zemin:         #0f1418;   /* sayfa yüzeyi */
+    --bant:          #1d252c;   /* ters bant: koyu bölümler, altbilgi */
+    --kagit:         #e6e9ec;   /* birincil açık mürekkep */
+    --kagit-bant:    #151c22;   /* üst bant, yükseltilmiş yüzey */
+    --kagit-koyu:    #9aa5b1;   /* ikincil metin */
+    --cizgi:         #2c3640;
+    --cizgi-ince:    #232c34;
+    --cizgi-koyu:    #35414b;
+    --murekkep:      #e6e9ec;   /* gövde metni */
+    --murekkep-orta: #9aa5b1;   /* ikincil gövde metni */
 
-    /* Ana renk: saf hâli blok ve büyük rakamlarda,
-       koyu varyantı küçük metin ve bağlantılarda */
-    --kiremit:       #fd7b41;
-    --kiremit-koyu:  #a44618;
+    /* Ana renk: bakır. Koyu zeminde okunur kalması için açık varyant
+       küçük metin ve bağlantılarda kullanılır. */
+    --kiremit:       #d2764a;
+    --kiremit-koyu:  #e08a5c;
 
-    /* Ana rengin yumuşak yüzeyi */
-    --seftali:       #edbf9b;
+    /* Kayıt üzerine gelince hafif yükselen yüzey */
+    --seftali:       #161c22;
 
     /* Tek yarıçap: keskin köşe */
     --radius: 0px;
@@ -48,7 +50,7 @@ html {
 }
 
 body {
-    background: var(--kagit);
+    background: var(--zemin);
     color: var(--murekkep-orta);
     font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
     font-optical-sizing: auto;
@@ -88,7 +90,7 @@ header {
     top: 0;
     z-index: 100;
     background: var(--kagit-bant);
-    border-bottom: 1px solid var(--murekkep);
+    border-bottom: 1px solid var(--cizgi-koyu);
 }
 
 header .sayfa {
@@ -154,7 +156,7 @@ nav a:hover {
     right: 0;
     bottom: 0;
     height: 1px;
-    background: var(--murekkep);
+    background: var(--cizgi-koyu);
     pointer-events: none;
 }
 
@@ -279,7 +281,7 @@ main > section:last-of-type::after {
 
 /* Zemin ritmi: açık yüzey, bir ters bant, sonra yeniden açık yüzey */
 .bolum-koyu {
-    background: var(--murekkep);
+    background: var(--bant);
     color: var(--kagit-koyu);
 }
 
@@ -298,7 +300,7 @@ main > section:last-of-type::after {
 }
 
 .bolum-koyu::after {
-    background: var(--murekkep);
+    background: var(--cizgi-koyu);
 }
 
 .bolum-koyu a {
@@ -478,10 +480,10 @@ main > section:last-of-type::after {
 .kayit-ac {
     display: inline-block;
     margin-top: 22px;
-    background: var(--murekkep);
-    border: 1px solid var(--murekkep);
+    background: transparent;
+    border: 1px solid var(--cizgi-koyu);
     border-radius: var(--radius);
-    color: var(--kagit);
+    color: var(--murekkep);
     font-family: 'DM Mono', 'IBM Plex Mono', monospace;
     font-weight: 500;
     font-size: 0.72rem;
@@ -495,7 +497,7 @@ main > section:last-of-type::after {
 .kayit-ac:hover {
     background: var(--kiremit);
     border-color: var(--kiremit);
-    color: var(--murekkep);
+    color: var(--zemin);
 }
 
 .kayit-ac[aria-expanded="true"] {
@@ -545,7 +547,7 @@ main > section:last-of-type::after {
     width: 100%;
     border: 1px solid var(--cizgi);
     border-radius: var(--radius);
-    background: var(--kagit-koyu);
+    background: var(--bant);
     cursor: zoom-in;
 }
 
@@ -595,7 +597,7 @@ main > section:last-of-type::after {
 }
 
 footer {
-    background: var(--murekkep);
+    background: var(--bant);
     border-top: 1px solid var(--cizgi-koyu);
     padding: 30px 0 34px;
     font-family: 'DM Mono', 'IBM Plex Mono', monospace;
@@ -628,7 +630,7 @@ footer nav {
     position: fixed;
     inset: 0;
     z-index: 500;
-    background: rgba(27, 24, 21, 0.94);
+    background: rgba(8, 11, 14, 0.95);
     padding: 64px 28px;
 }
 
