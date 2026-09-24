@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erhan Yüksel Turgut / Proje Kayıtları</title>
+    <title>Erhan Yüksel Turgut</title>
 
     <!-- SEO -->
     <meta name="description"
@@ -12,7 +12,7 @@
     <meta name="author" content="Erhan Yüksel Turgut">
     <meta name="keywords"
         content="Erhan Yüksel Turgut, Bilgisayar Mühendisi, Makine Öğrenmesi, Derin Öğrenme, Görüntü İşleme, Flutter, Python, Portföy">
-    <meta name="theme-color" content="#e9e4d9">
+    <meta name="theme-color" content="#f1efe9">
     <link rel="canonical" href="https://www.erhanyukselturgut.com/">
 
     <!-- Open Graph (LinkedIn / WhatsApp / Facebook önizlemesi) -->
@@ -35,7 +35,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
@@ -62,23 +62,25 @@
 
     <header>
         <div class="sayfa">
-            <div class="kunye-ad">Erhan Yüksel Turgut / Proje Kayıtları</div>
+            <div class="kunye-ad">Erhan Yüksel Turgut</div>
             <nav aria-label="Sayfa içi gezinme">
                 <ul>
-                    <li><a href="#kunye"><span class="no-etiket">00</span>Künye</a></li>
-                    <li><a href="#calisma"><span class="no-etiket">01</span>Çalışma Alanı</a></li>
-                    <li><a href="#kayitlar"><span class="no-etiket">02</span>Kayıtlar</a></li>
-                    <li><a href="#iletisim"><span class="no-etiket">03</span>İletişim</a></li>
+                    <li><a href="#kunye">Künye</a></li>
+                    <li><a href="#calisma">Çalışma Alanı</a></li>
+                    <li><a href="#kayitlar">Kayıtlar</a></li>
+                    <li><a href="#kayitdisi">Kayıt Dışı</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
                     <li><a href="CV_ErhanYukselTurgut.pdf" download>CV.pdf</a></li>
                 </ul>
             </nav>
+            <div class="ilerleme" id="ilerleme" aria-hidden="true"></div>
         </div>
     </header>
 
     <main>
 
         <!-- 00 KÜNYE -->
-        <section id="kunye" class="kunye">
+        <section id="kunye" class="kunye" data-sonraki="01">
             <div class="sayfa kunye-govde">
                 <div>
                     <img src="images/my_photo.jpeg" alt="Erhan Yüksel Turgut" class="portre" data-buyut
@@ -128,7 +130,7 @@
         </section>
 
         <!-- 01 ÇALIŞMA ALANI -->
-        <section id="calisma" class="bolum">
+        <section id="calisma" class="bolum bolum-koyu" data-sonraki="02">
             <div class="sayfa">
                 <div class="bolum-basi">
                     <div class="bolum-no">01 / Çalışma Alanı</div>
@@ -173,101 +175,233 @@
         </section>
 
         <!-- 02 KAYITLAR -->
-        <section id="kayitlar" class="bolum">
+        <section id="kayitlar" class="bolum" data-sonraki="03">
             <div class="sayfa">
                 <div class="bolum-basi">
                     <div class="bolum-no">02 / Kayıtlar</div>
-                    <h2>Beş proje, ölçülmüş sonuçlar</h2>
+                    <h2>11 proje, ölçülmüş sonuçlar</h2>
                 </div>
 
                 <div class="kayitlar">
 
                     <!-- Kayıt 01 -->
-                    <article class="kayit">
+                    <article class="kayit belirir">
                         <div class="ray">
                             <span class="no">01</span>
                             <dl>
                                 <dt>Tür</dt>
-                                <dd>Mobil uygulama</dd>
+                                <dd>Medikal görüntü analizi</dd>
                                 <dt>Durum</dt>
-                                <dd>Yayında</dd>
-                                <dt>Platform</dt>
-                                <dd>iOS, Android</dd>
+                                <dd>Staj çalışması</dd>
+                                <dt>Kapsam</dt>
+                                <dd>Mamografi, ultrason, MR</dd>
                                 <dt>Yığın</dt>
-                                <dd>Flutter, Dart</dd>
+                                <dd>PyTorch, TensorRT</dd>
                             </dl>
                         </div>
 
                         <div>
-                            <h3>Mediko: Yemek &amp; Bakiye</h3>
+                            <h3>Medikal Görüntüde Tespit, Segmentasyon ve Gerçek Zamanlı Çıkarım</h3>
                             <p class="kayit-ozet">
-                                Öğrencilerin günlük yemek menüsünü görüntülemesi ve kart bakiyesini sorgulaması için
-                                Flutter ile geliştirdiğim uygulama. Bakiye sorgulama, okulun mevcut sistemine entegre
-                                çalışır ve güncel hesap bilgisini anlık olarak getirir.
+                                PeraSoft stajında mamografi, meme ultrasonu ve beyin MR verilerinde tespit, segmentasyon ve sınıflandırma modelleri geliştirdim. Beş ayrı alt proje, her biri kendi ölçüm protokolü ve sonuç raporuyla yürütüldü.
                             </p>
 
                             <div class="olcum">
                                 <div>
-                                    <span class="deger">200+</span>
-                                    <span class="ad">Aktif kullanıcı</span>
+                                    <span class="deger">0.76</span>
+                                    <span class="ad">RF-DETR mAP@50</span>
                                 </div>
                                 <div>
-                                    <span class="deger">2</span>
-                                    <span class="ad">Mağaza</span>
+                                    <span class="deger">90.7</span>
+                                    <span class="ad">FPS, SegFormer-B0</span>
                                 </div>
                                 <div>
-                                    <span class="deger">0 ₺</span>
-                                    <span class="ad">Kullanım bedeli</span>
+                                    <span class="deger">385→138 ms</span>
+                                    <span class="ad">Vaka başına süre</span>
                                 </div>
                             </div>
 
                             <button class="kayit-ac" type="button" aria-expanded="false"
-                                aria-controls="detay-01">Kaydı aç</button>
+                                aria-controls="detay-01">Detayı görüntüle</button>
 
                             <div class="kayit-detay" id="detay-01">
                                 <p>
-                                    Bakiye yetersiz olduğunda uygulama kullanıcıyı uyarır ve bakiye yükleme sayfasına
-                                    yönlendirir. Yemek menüleri okulun web sitesinden HTML ayrıştırma yöntemiyle anlık
-                                    olarak çekilir, böylece içerik manuel müdahale olmadan güncel kalır.
+                                    Kitle lezyonu tespitinde RF-DETR, YOLO11 ve YOLO26'yı aynı veri bölünmesiyle karşılaştırdım; RF-DETR mAP@50 0.7551 ve 0.815 duyarlılıkla öne çıktı. Meme yoğunluğu segmentasyonunda altı modeli sabit protokolle eğittim, en iyi sonucu U-Net + ResNet34 verdi (Dice 0.8059).
                                 </p>
                                 <p>
-                                    Uygulama iOS ve Android üzerinde aynı Flutter kod tabanından yayınlanıyor ve 200'ün
-                                    üzerinde öğrenci tarafından aktif olarak kullanılıyor.
+                                    Ultrason segmentasyonunda üç mimariyi üçer tohumla, toplam dokuz koşuda ölçtüm. SegFormer-B0 90.7 FPS ile gerçek zamanlı hattı taşıyor ve YOLOv11n-Seg'e üstünlüğü istatistiksel olarak anlamlı çıktı (+0.035 Dice, p = 0.003).
+                                </p>
+                                <p>
+                                    MR inme segmentasyonunda önce zamanın nereye gittiğini ölçtüm. Sürenin dörtte üçü ön işlemeye gidiyordu; yeniden örnekleme ve beyin maskesini GPU'ya taşıyınca vaka başına süre 385 ms'den 138 ms'ye indi. ONNX ve TensorRT izole ölçümde hızlı görünmelerine rağmen gerçek hatta kazanç vermediği için yığından çıkardım.
                                 </p>
 
                                 <div class="plakalar">
                                     <div class="plaka">
                                         <figure>
-                                            <img src="images/mediko_1.jpeg" alt="Mediko günlük yemek menüsü ekranı"
-                                                data-buyut data-alt="Mediko: günlük yemek menüsü ekranı" loading="lazy">
-                                            <figcaption>Günlük menü ekranı</figcaption>
+                                            <img src="images/perasoft_kalite_hiz.png" alt="Ultrason segmentasyonunda üç mimarinin kalite ve hız karşılaştırması"
+                                                data-buyut data-alt="Ultrason segmentasyonunda üç mimarinin kalite ve hız karşılaştırması" loading="lazy">
+                                            <figcaption>Kalite–hız karşılaştırması</figcaption>
                                         </figure>
                                     </div>
                                     <div class="plaka">
                                         <figure>
-                                            <img src="images/mediko_2.jpeg" alt="Mediko bakiye sorgulama ekranı"
-                                                data-buyut data-alt="Mediko: bakiye sorgulama ekranı" loading="lazy">
-                                            <figcaption>Bakiye sorgulama ekranı</figcaption>
+                                            <img src="images/perasoft_gecikme.png" alt="İnme segmentasyonunda gecikme optimizasyonu basamakları"
+                                                data-buyut data-alt="İnme segmentasyonunda gecikme optimizasyonu basamakları" loading="lazy">
+                                            <figcaption>Gecikme merdiveni</figcaption>
                                         </figure>
                                     </div>
                                 </div>
 
-                                <p class="etiketler">Flutter / Dart / iOS / Android / HTML ayrıştırma</p>
+                                <p class="etiketler">PyTorch / RF-DETR / SegFormer / U-Net / ONNX / TensorRT / Albumentations</p>
 
                                 <div class="baglantilar">
-                                    <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
-                                        target="_blank" rel="noopener">App Store</a>
-                                    <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko"
-                                        target="_blank" rel="noopener">Google Play</a>
+                                    <a href="https://github.com/Yukseltt/mamografi" target="_blank" rel="noopener">Depo ve sonuç raporları</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
                     <!-- Kayıt 02 -->
-                    <article class="kayit">
+                    <article class="kayit belirir">
                         <div class="ray">
                             <span class="no">02</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>RAG / bilgi erişimi</dd>
+                                <dt>Durum</dt>
+                                <dd>Bitirme projesi</dd>
+                                <dt>Kapsam</dt>
+                                <dd>3 kişilik ekip</dd>
+                                <dt>Yığın</dt>
+                                <dd>PyTorch, Sentence-Transformers</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>Local Deep Research: Yerel Ağda Çalışan Araştırma Motoru</h3>
+                            <p class="kayit-ozet">
+                                Kurumsal veri gizliliğini koruyan, tamamen yerel ağda çalışan RAG tabanlı araştırma motoru. Ekipte veri üretimi ve embedding modeli tarafını üstlendim.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">7.194</span>
+                                    <span class="ad">Sentetik QA çifti</span>
+                                </div>
+                                <div>
+                                    <span class="deger">%64 → %75</span>
+                                    <span class="ad">Recall@1</span>
+                                </div>
+                                <div>
+                                    <span class="deger">2.4×</span>
+                                    <span class="ad">Pozitif-negatif ayrışma</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-02">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-02">
+                                <p>
+                                    329 akademik dokümandan Ollama üzerinde çalışan Ministral-3:8b ile SQuAD v2.0 formatında 7.194 soru-cevap çiftlik sentetik veri seti ürettim. Cevapların bağlamdan birebir alıntı olmasını zorlayan prompt tasarımı ve doğrulama akışı kurdum.
+                                </p>
+                                <p>
+                                    BGE-M3 embedding modelini MultipleNegativesRankingLoss ile fine-tune ederek Recall@1'i 0.6406'dan 0.7482'ye çıkardım; pozitif ve negatif eşleşmelerin kosinüs benzerlik farkını 0.149'dan 0.362'ye, yani 2.4 katına genişlettim.
+                                </p>
+                                <p>
+                                    Sınırlı GPU belleğinde gradient checkpointing, gradient accumulation (4×8) ve FP16 ile effective batch size 32'yi koruyarak eğitimi tamamladım. Aynı veri setiyle bge-large-en-v1.5 modelini hard negative mining ile eğitip iki modeli karşılaştırdım.
+                                </p>
+
+                                <p class="etiketler">PyTorch / Sentence-Transformers / BGE-M3 / Ollama / SQuAD / FP16</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://github.com/Yukseltt/Local_deep_research" target="_blank" rel="noopener">Depo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 03 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">03</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>Uç cihaz nesne tespiti</dd>
+                                <dt>Durum</dt>
+                                <dd>Ar-Ge programı</dd>
+                                <dt>Kapsam</dt>
+                                <dd>SAYZEK ATP</dd>
+                                <dt>Yığın</dt>
+                                <dd>PyTorch, ONNX, TensorRT</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>Uç Cihazlar İçin Optimize Nesne Tespit Modelleri</h3>
+                            <p class="kayit-ozet">
+                                Savunma Sanayii Başkanlığı SAYZEK ATP programında, havadan çekilmiş termal ve RGB görüntülerde insan ve araç tespiti yapan modellerin eğitimi, sıkıştırılması ve uç cihaz ölçümü.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">0.81</span>
+                                    <span class="ad">mAP@50</span>
+                                </div>
+                                <div>
+                                    <span class="deger">~40</span>
+                                    <span class="ad">FPS, Jetson Orin</span>
+                                </div>
+                                <div>
+                                    <span class="deger">5</span>
+                                    <span class="ad">Budanmış mimari</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-03">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-03">
+                                <p>
+                                    İki dedektör mimarisini (DETR-ResNet50 ve Faster R-CNN) aynı veri setinde eğitip karşılaştırdım; Faster R-CNN ile mAP@[.50:.95] 0.53 ve AP50 0.91 elde ederek DETR'in üzerine çıktım. Nesne boyutuna göre başarım kırılımı çıkararak model seçimini küçük nesne performansı üzerinden gerekçelendirdim.
+                                </p>
+                                <p>
+                                    Sınıf dengesizliğine karşı Focal Loss ve Class-Balanced Loss uygulamalarını yazıp taban modelle karşılaştırdım. Class-Balanced Loss duyarlılığı 0.84'e çıkarıyor, ancak mAP@50'de taban modeli geçmiyor.
+                                </p>
+                                <p>
+                                    Eğitilen modelleri uç cihaza taşımak için ONNX dönüşüm ve TensorRT motor üretim hattını kurdum: YOLO için FP16 ve INT8 kalibrasyonlu motor üretimi, Faster R-CNN ve RT-DETR için ONNX Runtime TensorRT sağlayıcısı ve motor önbellekleme.
+                                </p>
+
+                                <div class="plakalar">
+                                    <div class="plaka">
+                                        <figure>
+                                            <img src="images/sayzek_tespit_1.jpg" alt="Havadan termal görüntüde insan tespiti çıktısı"
+                                                data-buyut data-alt="Havadan termal görüntüde insan tespiti çıktısı" loading="lazy">
+                                            <figcaption>Termal tespit çıktısı</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="plaka">
+                                        <figure>
+                                            <img src="images/sayzek_tespit_2.jpg" alt="RGB-termal veri setinde tespit çıktısı"
+                                                data-buyut data-alt="RGB-termal veri setinde tespit çıktısı" loading="lazy">
+                                            <figcaption>RGB-T tespit çıktısı</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                                <p class="etiketler">PyTorch / YOLO / RT-DETR / Faster R-CNN / ONNX / TensorRT / Jetson Orin</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://github.com/Yukseltt/CNN-models-optimized-to-run-on-edge-devices" target="_blank" rel="noopener">Depo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 04 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">04</span>
                             <dl>
                                 <dt>Tür</dt>
                                 <dd>Derin öğrenme</dd>
@@ -276,7 +410,7 @@
                                 <dt>Sınıf</dt>
                                 <dd>tumor / no tumor</dd>
                                 <dt>Yığın</dt>
-                                <dd>Python, TensorFlow</dd>
+                                <dd>PyTorch, Albumentations</dd>
                             </dl>
                         </div>
 
@@ -291,36 +425,44 @@
 
                             <div class="olcum">
                                 <div>
-                                    <span class="deger">99,61</span>
-                                    <span class="ad">F1 / hibrit model</span>
+                                    <span class="deger">0.9950</span>
+                                    <span class="ad">F1-Score</span>
                                 </div>
                                 <div>
-                                    <span class="deger">99,01</span>
-                                    <span class="ad">F1 / EYTV10</span>
+                                    <span class="deger">12</span>
+                                    <span class="ad">Karşılaştırılan model</span>
                                 </div>
                                 <div>
-                                    <span class="deger">9.500</span>
-                                    <span class="ad">MR görüntüsü</span>
+                                    <span class="deger">0.9994</span>
+                                    <span class="ad">AUC</span>
                                 </div>
                             </div>
 
                             <button class="kayit-ac" type="button" aria-expanded="false"
-                                aria-controls="detay-02">Kaydı aç</button>
+                                aria-controls="detay-04">Detayı görüntüle</button>
 
-                            <div class="kayit-detay" id="detay-02">
+                            <div class="kayit-detay" id="detay-04">
                                 <p>
-                                    Modelleri eğitmeden önce parametre optimizasyonu, veri artırma ve keşifsel veri
-                                    analizi ile veri kümesini eğitime hazırladım. Görüntüler tumor ve no tumor olmak
-                                    üzere iki sınıfa dengeli biçimde dağılmıştır.
+                                    Sıfırdan tasarladığım EytNet ailesini (V1, V1_High, V1_Opt, V2, V2_Opt) hazır
+                                    omurgalar ve hibrit mimarilerle aynı veri setinde karşılaştırdım. Toplam on iki
+                                    model eğitildi; en iyi sonucu EytNet_V1 verdi: F1 0.9950, AUC 0.9994. Bu sonuç,
+                                    ImageNet ön eğitimli ResNet50 (0.9416) ve DenseNet121'in (0.9497) belirgin
+                                    biçimde üzerinde.
                                 </p>
                                 <p>
-                                    EYTV10 modelinde aşamalı boyutlandırma, test zamanı artırma (TTA) ve etiket
-                                    yumuşatma tekniklerini uyguladım. Sonuç, modern eğitim stratejileri
-                                    kullanıldığında özgün modellerin büyük ön eğitimli modellerle rekabet
-                                    edebildiğini gösteriyor.
+                                    Çalışmanın asıl bulgusu şu: V1'in üzerine Depthwise Separable Conv, SE Block,
+                                    MixUp, SWA ve etiket yumuşatmayı birlikte ekleyen EytNet_V1_Opt varyantı daha iyi
+                                    genellemedi, tam tersine F1 0.9464'e düştü. Küçük veri setinde bu tekniklerin
+                                    toplamı kapasiteyi fazla kısıtlayıp underfitting yarattı. Tek tek makul olan
+                                    iyileştirmelerin bir arada neden ölçülmesi gerektiğini gösteren somut bir örnek.
+                                </p>
+                                <p>
+                                    Değerlendirmede doğruluk, kesinlik, duyarlılık, özgüllük, F1, Cohen's Kappa ve
+                                    AUC birlikte raporlandı; tüm modeller aynı veri bölünmesi ve aynı protokolle
+                                    ölçüldü. Çalışmanın TensorFlow ile yürüttüğüm ilk sürümü de depoda duruyor.
                                 </p>
 
-                                <p class="etiketler">Python / TensorFlow / Albumentations / CNN / Matplotlib</p>
+                                <p class="etiketler">PyTorch / Albumentations / EytNet / SE Block / MixUp / SWA</p>
 
                                 <div class="baglantilar">
                                     <a href="https://github.com/Yukseltt/mr_analyze" target="_blank"
@@ -330,10 +472,174 @@
                         </div>
                     </article>
 
-                    <!-- Kayıt 03 -->
-                    <article class="kayit">
+                    <!-- Kayıt 05 -->
+                    <article class="kayit belirir">
                         <div class="ray">
-                            <span class="no">03</span>
+                            <span class="no">05</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>Veri etiketleme aracı</dd>
+                                <dt>Durum</dt>
+                                <dd>Açık kaynak</dd>
+                                <dt>Kapsam</dt>
+                                <dd>Metin komutuyla etiketleme</dd>
+                                <dt>Yığın</dt>
+                                <dd>Grounding DINO, SAM2</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>AutoLabel: Metin Komutuyla Veri Seti Üretimi</h3>
+                            <p class="kayit-ozet">
+                                Etiketlenmemiş bir görüntü klasöründen, yalnızca sınıf adlarını yazarak eğitime hazır nesne tespiti veri seti üretir. Elle kutu çizme adımını ortadan kaldırır.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">2</span>
+                                    <span class="ad">Model zinciri</span>
+                                </div>
+                                <div>
+                                    <span class="deger">5</span>
+                                    <span class="ad">Çıktı formatı</span>
+                                </div>
+                                <div>
+                                    <span class="deger">0</span>
+                                    <span class="ad">Etiketli veri gereksinimi</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-05">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-05">
+                                <p>
+                                    Grounding DINO yazılan sınıf adlarını görüntüde arayıp kutuları çıkarır, SAM2.1 her kutuyu piksel maskesine çevirir, Supervision ile sonuç YOLOv8, COCO, Pascal VOC, CSV veya TFRecord formatına yazılır. Önceden eğitilmiş bir dedektöre veya etiketli veriye ihtiyaç duymaz.
+                                </p>
+                                <p>
+                                    Tüm klasör işlenmeden önce küçük bir örneklemde eşik ayarı yapılır; etiketleme sonrası görsel doğrulama ve sınıf dağılımı raporu üretilir.
+                                </p>
+
+                                <p class="etiketler">Grounding DINO / SAM2.1 / Supervision / YOLO / COCO</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://github.com/Yukseltt/Auto_Labeler" target="_blank" rel="noopener">Depo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 06 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">06</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>Doğal dil işleme</dd>
+                                <dt>Durum</dt>
+                                <dd>Açık kaynak</dd>
+                                <dt>Kapsam</dt>
+                                <dd>Türkçe ve İngilizce</dd>
+                                <dt>Yığın</dt>
+                                <dd>Python, Ollama</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>Text Humanizer: Yerel Çalışan Metin İnsanlaştırıcı</h3>
+                            <p class="kayit-ozet">
+                                Yapay zekâ üretimi metinleri insan kaleminden çıkmış gibi yeniden yazan, tamamen yerel çalışan araç. Kural tabanlı kipler internet bağlantısı olmadan çalışır.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">118</span>
+                                    <span class="ad">Geçen test</span>
+                                </div>
+                                <div>
+                                    <span class="deger">2</span>
+                                    <span class="ad">Desteklenen dil</span>
+                                </div>
+                                <div>
+                                    <span class="deger">0</span>
+                                    <span class="ad">Dış servis çağrısı</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-06">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-06">
+                                <p>
+                                    LLM çıkarımı için Ollama kullanır; kural tabanlı modlarda hiçbir ağ bağlantısı gerekmez. Türkçe ve İngilizce metinlerde yapay zekâ kalıplarını tespit edip yeniden yazar.
+                                </p>
+                                <p>
+                                    Proje MIT lisansıyla yayımlanmıştır ve 118 testlik bir test takımıyla birlikte gelir.
+                                </p>
+
+                                <p class="etiketler">Python / Ollama / NLP / CLI</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://github.com/Yukseltt/text_humanize" target="_blank" rel="noopener">Depo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 07 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">07</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>Optimizasyon</dd>
+                                <dt>Durum</dt>
+                                <dd>Kişisel proje</dd>
+                                <dt>Kapsam</dt>
+                                <dd>Web uygulaması</dd>
+                                <dt>Yığın</dt>
+                                <dd>Python, Streamlit</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>FC26 Squad Optimizer</h3>
+                            <p class="kayit-ozet">
+                                Bütçe ve formasyon kısıtları altında en iyi futbol kadrosunu kuran interaktif uygulama. Makine öğrenmesi, sinir ağları ve genetik algoritmayı birlikte kullanır.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">3</span>
+                                    <span class="ad">Birleştirilen yöntem</span>
+                                </div>
+                                <div>
+                                    <span class="deger">2</span>
+                                    <span class="ad">Kısıt türü</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-07">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-07">
+                                <p>
+                                    Oyuncu verisinden başarım tahmini yapan model ile bütçe ve formasyon kısıtlarını gözeten genetik algoritma birlikte çalışır; sonuç Streamlit arayüzünde etkileşimli olarak sunulur.
+                                </p>
+
+                                <p class="etiketler">Python / Streamlit / Genetik algoritma / Sinir ağları</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://github.com/Yukseltt/fc26_squad_optimizer" target="_blank" rel="noopener">Depo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 08 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">08</span>
                             <dl>
                                 <dt>Tür</dt>
                                 <dd>Görüntü işleme</dd>
@@ -371,9 +677,9 @@
                             </div>
 
                             <button class="kayit-ac" type="button" aria-expanded="false"
-                                aria-controls="detay-03">Kaydı aç</button>
+                                aria-controls="detay-08">Detayı görüntüle</button>
 
-                            <div class="kayit-detay" id="detay-03">
+                            <div class="kayit-detay" id="detay-08">
                                 <p>
                                     Masa alanları config.json dosyasında kalıcı olarak saklanır ve düzenleme modu
                                     sayesinde yeniden çizilebilir. Nesne doğruluk eşikleri ayarlanarak algılama
@@ -418,10 +724,92 @@
                         </div>
                     </article>
 
-                    <!-- Kayıt 04 -->
-                    <article class="kayit">
+                    <!-- Kayıt 09 -->
+                    <article class="kayit belirir">
                         <div class="ray">
-                            <span class="no">04</span>
+                            <span class="no">09</span>
+                            <dl>
+                                <dt>Tür</dt>
+                                <dd>Mobil uygulama</dd>
+                                <dt>Durum</dt>
+                                <dd>Yayında</dd>
+                                <dt>Platform</dt>
+                                <dd>iOS, Android</dd>
+                                <dt>Yığın</dt>
+                                <dd>Flutter, Dart</dd>
+                            </dl>
+                        </div>
+
+                        <div>
+                            <h3>Mediko: Yemek &amp; Bakiye</h3>
+                            <p class="kayit-ozet">
+                                Öğrencilerin günlük yemek menüsünü görüntülemesi ve kart bakiyesini sorgulaması için
+                                Flutter ile geliştirdiğim uygulama. Bakiye sorgulama, okulun mevcut sistemine entegre
+                                çalışır ve güncel hesap bilgisini anlık olarak getirir.
+                            </p>
+
+                            <div class="olcum">
+                                <div>
+                                    <span class="deger">200+</span>
+                                    <span class="ad">Aktif kullanıcı</span>
+                                </div>
+                                <div>
+                                    <span class="deger">2</span>
+                                    <span class="ad">Mağaza</span>
+                                </div>
+                                <div>
+                                    <span class="deger">0 ₺</span>
+                                    <span class="ad">Kullanım bedeli</span>
+                                </div>
+                            </div>
+
+                            <button class="kayit-ac" type="button" aria-expanded="false"
+                                aria-controls="detay-09">Detayı görüntüle</button>
+
+                            <div class="kayit-detay" id="detay-09">
+                                <p>
+                                    Bakiye yetersiz olduğunda uygulama kullanıcıyı uyarır ve bakiye yükleme sayfasına
+                                    yönlendirir. Yemek menüleri okulun web sitesinden HTML ayrıştırma yöntemiyle anlık
+                                    olarak çekilir, böylece içerik manuel müdahale olmadan güncel kalır.
+                                </p>
+                                <p>
+                                    Uygulama iOS ve Android üzerinde aynı Flutter kod tabanından yayınlanıyor ve 200'ün
+                                    üzerinde öğrenci tarafından aktif olarak kullanılıyor.
+                                </p>
+
+                                <div class="plakalar">
+                                    <div class="plaka">
+                                        <figure>
+                                            <img src="images/mediko_1.jpeg" alt="Mediko günlük yemek menüsü ekranı"
+                                                data-buyut data-alt="Mediko: günlük yemek menüsü ekranı" loading="lazy">
+                                            <figcaption>Günlük menü ekranı</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="plaka">
+                                        <figure>
+                                            <img src="images/mediko_2.jpeg" alt="Mediko bakiye sorgulama ekranı"
+                                                data-buyut data-alt="Mediko: bakiye sorgulama ekranı" loading="lazy">
+                                            <figcaption>Bakiye sorgulama ekranı</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+
+                                <p class="etiketler">Flutter / Dart / iOS / Android / HTML ayrıştırma</p>
+
+                                <div class="baglantilar">
+                                    <a href="https://apps.apple.com/tr/app/mediko-yemek-bakiye/id6753680225?l=tr"
+                                        target="_blank" rel="noopener">App Store</a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.erhanyukselturgut.mediko"
+                                        target="_blank" rel="noopener">Google Play</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Kayıt 10 -->
+                    <article class="kayit belirir">
+                        <div class="ray">
+                            <span class="no">10</span>
                             <dl>
                                 <dt>Tür</dt>
                                 <dd>Mobil uygulama</dd>
@@ -459,9 +847,9 @@
                             </div>
 
                             <button class="kayit-ac" type="button" aria-expanded="false"
-                                aria-controls="detay-04">Kaydı aç</button>
+                                aria-controls="detay-10">Detayı görüntüle</button>
 
-                            <div class="kayit-detay" id="detay-04">
+                            <div class="kayit-detay" id="detay-10">
                                 <p>
                                     Sistem mimarisi üç rol üzerine kurulu. Kullanıcı yeni bildirim oluşturur ve
                                     haritada olayları görür. Admin, kendi üniversitesine ait bildirimleri yönetir ve
@@ -554,10 +942,10 @@
                         </div>
                     </article>
 
-                    <!-- Kayıt 05 -->
-                    <article class="kayit">
+                    <!-- Kayıt 11 -->
+                    <article class="kayit belirir">
                         <div class="ray">
-                            <span class="no">05</span>
+                            <span class="no">11</span>
                             <dl>
                                 <dt>Tür</dt>
                                 <dd>Web platformu</dd>
@@ -594,9 +982,9 @@
                             </div>
 
                             <button class="kayit-ac" type="button" aria-expanded="false"
-                                aria-controls="detay-05">Kaydı aç</button>
+                                aria-controls="detay-11">Detayı görüntüle</button>
 
-                            <div class="kayit-detay" id="detay-05">
+                            <div class="kayit-detay" id="detay-11">
                                 <p>
                                     Veri saklama katmanında MongoDB kullandım, böylece esnek ve ölçeklenebilir bir
                                     veri yapısı elde ettim. Görsel ve medya dosyalarının yönetimi için Cloudinary
@@ -683,11 +1071,93 @@
             </div>
         </section>
 
-        <!-- 03 İLETİŞİM -->
-        <section id="iletisim" class="bolum">
+
+        <!-- 03 KAYIT DIŞI -->
+        <section id="kayitdisi" class="bolum bolum-koyu" data-sonraki="04">
             <div class="sayfa">
                 <div class="bolum-basi">
-                    <div class="bolum-no">03 / İletişim</div>
+                    <div class="bolum-no">03 / Kayıt Dışı</div>
+                    <h2>Takımlar, yarışmalar ve programlar</h2>
+                </div>
+
+                <div class="olaylar">
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2025 – 2026</div>
+                        <div>
+                            <h3>TEKNOFEST Savaşan İHA Yarışması</h3>
+                            <p class="olay-yer">ATA AIT Simurg takımı</p>
+                            <p>Finalist. Final uçuşlarında görev aldım; ArduPilot ve PX4 altyapısıyla otonom uçuş ve görev algoritmaları geliştiren ekipte çalıştım, yer kontrol arayüzünü Python ve PyQt5 ile kodladım.</p>
+                        </div>
+                    </article>
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2025 – 2026</div>
+                        <div>
+                            <h3>SAYZEK ATP</h3>
+                            <p class="olay-yer">Savunma Sanayii Başkanlığı</p>
+                            <p>Yapay Zekâ Yetenek Kümelenmesi programında 70 kişilik ekip bünyesinde Ar-Ge öğrencisi olarak uç cihazlarda çalışan nesne tespit modelleri üzerine çalıştım.</p>
+                        </div>
+                    </article>
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2026</div>
+                        <div>
+                            <h3>Turkcell CodeNight 2026</h3>
+                            <p class="olay-yer">TelcoGuard</p>
+                            <p>Baz istasyonu telemetrisinde gerçek zamanlı anomali tespiti ve şebeke operasyon merkezi izleme platformu geliştiren ekipte yer aldım.</p>
+                        </div>
+                    </article>
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2025</div>
+                        <div>
+                            <h3>Mühendislik Buluşması 2025</h3>
+                            <p class="olay-yer">Yüksek Teknoloji Topluluğu</p>
+                            <p>Yönetim kurulu üyesi olarak 200'ün üzerinde katılımcının yer aldığı etkinliğin organizasyonunu yürüttüm.</p>
+                        </div>
+                    </article>
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2024</div>
+                        <div>
+                            <h3>Uluslararası TAGRA 2024 Konferansı</h3>
+                            <p class="olay-yer">Yüksek Teknoloji Topluluğu</p>
+                            <p>Konferansın organizasyon ekibinde görev aldım.</p>
+                        </div>
+                    </article>
+                    <article class="olay belirir">
+                        <div class="olay-tarih">2023 – 2025</div>
+                        <div>
+                            <h3>TEKNOFEST</h3>
+                            <p class="olay-yer">Atec takımı</p>
+                            <p>Yüksek Teknoloji Topluluğu bünyesindeki Atec takımıyla TEKNOFEST finalistliği elde ettik.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ============================================================
+                     SERTİFİKALAR
+                     Her sertifika için aşağıdaki bloğu kopyalayıp doldurun.
+                     Görseli images/ klasörüne koyup src yolunu güncelleyin.
+                     Doğrulama bağlantısı yoksa <a> satırını silin.
+
+                <article class="belge belirir">
+                    <figure>
+                        <img src="images/sertifika_ORNEK.jpg" alt="SERTİFİKA ADI belgesi"
+                            data-buyut data-alt="SERTİFİKA ADI" loading="lazy">
+                    </figure>
+                    <div>
+                        <h3>SERTİFİKA ADI</h3>
+                        <p class="belge-veren">VEREN KURUM — TARİH</p>
+                        <a href="DOĞRULAMA_BAĞLANTISI" target="_blank" rel="noopener">Doğrula</a>
+                    </div>
+                </article>
+
+                     ============================================================ -->
+            </div>
+        </section>
+
+        <!-- 04 İLETİŞİM -->
+        <section id="iletisim" class="bolum bolum-koyu">
+            <div class="sayfa">
+                <div class="bolum-basi">
+                    <div class="bolum-no">04 / İletişim</div>
                     <h2>Yazışma ve bağlantılar</h2>
                 </div>
 
@@ -738,13 +1208,51 @@
     </div>
 
     <script>
+        // --- Okuma ilerlemesi (üst banttaki şerit) ---
+        var ilerleme = document.getElementById('ilerleme');
+        var ilerlemeBekliyor = false;
+
+        function ilerlemeGuncelle() {
+            var kaydirilabilir = document.documentElement.scrollHeight - window.innerHeight;
+            var oran = kaydirilabilir > 0 ? window.scrollY / kaydirilabilir : 0;
+            ilerleme.style.width = Math.min(Math.max(oran, 0), 1) * 100 + '%';
+            ilerlemeBekliyor = false;
+        }
+
+        window.addEventListener('scroll', function () {
+            if (!ilerlemeBekliyor) {
+                ilerlemeBekliyor = true;
+                window.requestAnimationFrame(ilerlemeGuncelle);
+            }
+        }, { passive: true });
+
+        ilerlemeGuncelle();
+
+        // --- Kayıtların görüş alanına girince yerine oturması ---
+        var belirenler = document.querySelectorAll('.belirir');
+
+        if ('IntersectionObserver' in window) {
+            var gozlemci = new IntersectionObserver(function (girisler) {
+                girisler.forEach(function (giris) {
+                    if (giris.isIntersecting) {
+                        giris.target.classList.add('gorunur');
+                        gozlemci.unobserve(giris.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -12% 0px' });
+
+            belirenler.forEach(function (oge) { gozlemci.observe(oge); });
+        } else {
+            belirenler.forEach(function (oge) { oge.classList.add('gorunur'); });
+        }
+
         // --- Kayıt açma / kapama (yerinde genişleme) ---
         document.querySelectorAll('.kayit-ac').forEach(function (buton) {
             buton.addEventListener('click', function () {
                 var detay = document.getElementById(buton.getAttribute('aria-controls'));
                 var acik = detay.classList.toggle('acik');
                 buton.setAttribute('aria-expanded', acik ? 'true' : 'false');
-                buton.textContent = acik ? 'Kaydı kapat' : 'Kaydı aç';
+                buton.textContent = acik ? 'Detayı gizle' : 'Detayı görüntüle';
             });
         });
 
