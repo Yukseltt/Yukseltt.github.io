@@ -373,6 +373,14 @@ main > section:last-of-type::after {
     font-weight: 400;
 }
 
+/* Kayıtlarda beliriş animasyonu yalnızca opaklıkla yapılır.
+   Sebep: .kayit içindeki .ray sticky; transform uygulanmış bir ata,
+   içindeki sticky öğenin kapsayan bloğunu değiştirdiği için animasyon
+   sırasında ray kendi kaydının dışına taşıp komşu kayda biniyordu. */
+.kayit.belirir {
+    transform: none;
+}
+
 /* --- KAYITLAR (projeler) --- */
 .kayitlar {
     border-top: 1px solid var(--cizgi-ince);
